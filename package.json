@@ -1,0 +1,24 @@
+{
+  "name": "nimble-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dondrey Taylor",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "config": "^3.0.1",
+    "handlebars": "^4.1.2",
+    "handlebars-layout": "^0.1.4",
+    "handlebars-layouts": "^3.1.4",
+    "hapi": "^17.8.5",
+    "inert": "^5.1.3",
+    "mongojs": "^2.5.0",
+    "mustache": "^2.3.2",
+    "nodemailer": "^6.3.1",
+    "vision": "^5.4.4"
+  }
+}

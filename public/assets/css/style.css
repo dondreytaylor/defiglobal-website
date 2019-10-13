@@ -1,0 +1,821 @@
+@font-face {
+  font-family: "RubikRegular";
+  src: url("/static/assets/fonts/rubik/Rubik-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: "RubikLight";
+  src: url("/static/assets/fonts/rubik/Rubik-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: "RubikBold";
+  src: url("/static/assets/fonts/rubik/Rubik-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: "RubikMedium";
+  src: url("/static/assets/fonts/rubik/Rubik-Medium.ttf") format("truetype"); }
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+* {
+  font-family: "RubikRegular";
+  box-sizing: border-box; }
+
+strong {
+  font-family: "RubikBold"; }
+
+header {
+  width: 100%;
+  min-height: 5rem;
+  position: fixed;
+  z-index: 10;
+  padding: 1.3rem 0 0 0;
+  top: 0;
+  left: 0; }
+  header div[data-name="holder"] {
+    max-width: 64rem;
+    width: 95%;
+    margin: 0 auto;
+    display: block; }
+    header div[data-name="holder"] a[data-name="logo"] {
+      width: 10rem;
+      height: 2.7rem;
+      display: inline-block; }
+      @media (max-width: 64em) {
+        header div[data-name="holder"] a[data-name="logo"] {
+          display: block;
+          margin: 0 auto;
+          width: 9rem;
+          height: 2rem;
+          left: 1rem;
+          position: relative; } }
+      header div[data-name="holder"] a[data-name="logo"] div {
+        width: inherit;
+        height: inherit;
+        background-image: url("/static/assets/images/defiglobal-logo.png");
+        background-size: contain;
+        background-repeat: no-repeat; }
+    header div[data-name="holder"] div[data-name="links"] {
+      float: right;
+      display: inline-block; }
+      header div[data-name="holder"] div[data-name="links"] a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 0.9rem;
+        display: inline-block;
+        margin-left: 3rem; }
+        @media (max-width: 64em) {
+          header div[data-name="holder"] div[data-name="links"] a {
+            margin: 1rem 0.5rem; } }
+        @media (min-width: 64em) {
+          header div[data-name="holder"] div[data-name="links"] a[data-name="link-contact"] {
+            background-color: #FFFFFF;
+            color: #6500FF;
+            border-radius: 0.2rem;
+            padding: 0.5rem 1rem; } }
+      @media (max-width: 64em) {
+        header div[data-name="holder"] div[data-name="links"] {
+          float: none;
+          display: block;
+          text-align: center; } }
+  header.alt {
+    background-color: #FFFFFF; }
+    header.alt div[data-name="holder"] a[data-name="logo"] div {
+      background-image: url("/static/assets/images/defiglobal-logo-alt.png"); }
+    header.alt div[data-name="holder"] div[data-name="links"] a {
+      color: #6500FF; }
+      @media (min-width: 64em) {
+        header.alt div[data-name="holder"] div[data-name="links"] a[data-name="link-contact"] {
+          background-color: #6500FF;
+          color: #FFFFFF; } }
+
+footer {
+  width: 100%;
+  padding: 4rem 2rem 5rem 2rem;
+  background-color: #F9FAFB;
+  text-align: center; }
+  footer div[data-name="logo"] {
+    width: 12rem;
+    height: 4rem;
+    margin: 0 auto 1rem auto;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/static/assets/images/defiglobal-footer-logo.png"); }
+    @media (max-width: 64em) {
+      footer div[data-name="logo"] {
+        width: 10rem;
+        height: 3rem; } }
+  footer div[data-name="copyright"] {
+    font-size: 0.9rem; }
+
+article {
+  max-width: 40rem;
+  margin: 0 auto;
+  width: 90%;
+  padding: 2rem 0 5rem 0;
+  line-height: 2;
+  font-size: 0.9rem;
+  min-height: 20rem; }
+  article h2 {
+    font-family: "RubikBold";
+    color: #6500FF;
+    font-size: 1.5rem; }
+
+div[data-name="pages"] div[data-name="page-intro"] {
+  width: 100%;
+  height: 80vh;
+  background-image: url("/static/assets/images/landing-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  div[data-name="pages"] div[data-name="page-intro"] div[data-name="box"] {
+    width: 90%;
+    max-width: 30rem;
+    padding: 4rem 1rem 4rem 1rem;
+    text-align: center;
+    border-radius: 2rem 0.2rem 2rem 0.2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
+    top: 30%;
+    position: relative; }
+    div[data-name="pages"] div[data-name="page-intro"] div[data-name="box"] h1 {
+      font-size: 1.4rem;
+      color: #6500FF;
+      margin: 0 0 2rem 0; }
+      @media (max-width: 64em) {
+        div[data-name="pages"] div[data-name="page-intro"] div[data-name="box"] h1 {
+          font-size: 1rem; } }
+    div[data-name="pages"] div[data-name="page-intro"] div[data-name="box"] a {
+      color: #FFFFFF;
+      background-color: #6500FF;
+      display: inline-block;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 0.5rem; }
+      @media (max-width: 64em) {
+        div[data-name="pages"] div[data-name="page-intro"] div[data-name="box"] a {
+          font-size: 0.9rem; } }
+div[data-name="pages"] div[data-name="page-independence"] {
+  padding: 5rem 2rem; }
+  div[data-name="pages"] div[data-name="page-independence"] h2 {
+    text-align: center;
+    display: block;
+    color: #6500FF;
+    font-size: 2rem;
+    margin: 0 0 5rem 0; }
+    @media (max-width: 40em) {
+      div[data-name="pages"] div[data-name="page-independence"] h2 {
+        font-size: 1.2rem; } }
+  div[data-name="pages"] div[data-name="page-independence"] div[data-name="map"] {
+    width: 38rem;
+    height: 35rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/static/assets/images/crypto-map.png");
+    display: block;
+    margin: 0 auto; }
+    @media (max-width: 40em) {
+      div[data-name="pages"] div[data-name="page-independence"] div[data-name="map"] {
+        width: 20rem;
+        height: 20rem; } }
+  div[data-name="pages"] div[data-name="page-independence"] div[data-name="text"] {
+    margin: 0 auto;
+    max-width: 40rem;
+    width: 95%;
+    line-height: 2;
+    text-align: center;
+    position: relative;
+    font-size: 0.9rem; }
+    div[data-name="pages"] div[data-name="page-independence"] div[data-name="text"] div[data-name="underline"] {
+      width: 5rem;
+      height: 0.3rem;
+      background-color: #000000;
+      border-radius: 0.3rem;
+      margin: 0 auto; }
+div[data-name="pages"] div[data-name="page-whoweare"] {
+  padding: 5rem 2rem; }
+  div[data-name="pages"] div[data-name="page-whoweare"] h3 {
+    border-radius: 1rem 0 1rem 0;
+    border: 0.4rem solid #6500FF;
+    color: #6500FF;
+    max-width: 15rem;
+    padding: 0.5rem;
+    font-family: "RubikBold";
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 0 auto 8rem auto; }
+    @media (max-width: 64em) {
+      div[data-name="pages"] div[data-name="page-whoweare"] h3 {
+        font-size: 1.3rem;
+        margin: 0 auto 5rem auto; } }
+  div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-left"] {
+    max-width: 55rem;
+    margin: 0 auto 8rem auto;
+    position: relative; }
+    @media (max-width: 64em) {
+      div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-left"] {
+        max-width: 40rem; } }
+    div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-left"] div[data-name="text"] {
+      display: inline-block;
+      max-width: 50%;
+      vertical-align: top;
+      position: relative; }
+      @media (max-width: 64em) {
+        div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-left"] div[data-name="text"] {
+          max-width: 100%; } }
+      div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-left"] div[data-name="text"] h4 {
+        font-size: 1.5rem;
+        color: #6500FF;
+        font-family: "RubikBold"; }
+      div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-left"] div[data-name="text"] p {
+        line-height: 1.8;
+        font-size: 0.9rem;
+        margin: 0 0 2rem 0; }
+      div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-left"] div[data-name="text"] a {
+        color: #FFFFFF;
+        background-color: #6500FF;
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        text-decoration: none;
+        border-radius: 0.5rem; }
+      div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-left"] div[data-name="text"] div[data-name="number"] {
+        position: absolute;
+        z-index: 0;
+        font-size: 19rem;
+        top: -5rem;
+        left: 4rem;
+        color: #6500FF;
+        opacity: 0.1;
+        font-family: "RubikBold"; }
+    div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-left"] div[data-name="image"] {
+      display: inline-block;
+      vertical-align: top;
+      width: 45%;
+      height: 28rem;
+      background-position: center center;
+      background-size: contain;
+      background-image: url("/static/assets/images/whoweare.png");
+      background-repeat: no-repeat;
+      margin: 0 0 0 2rem; }
+      @media (max-width: 64em) {
+        div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-left"] div[data-name="image"] {
+          display: none; } }
+  div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-right"] {
+    max-width: 55rem;
+    margin: 0 auto;
+    position: relative; }
+    @media (max-width: 64em) {
+      div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-right"] {
+        max-width: 40rem; } }
+    div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-right"] div[data-name="text"] {
+      display: inline-block;
+      max-width: 50%;
+      vertical-align: top;
+      position: relative; }
+      @media (max-width: 64em) {
+        div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-right"] div[data-name="text"] {
+          max-width: 100%; } }
+      div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-right"] div[data-name="text"] h4 {
+        font-size: 1.5rem;
+        color: #6500FF;
+        font-family: "RubikBold"; }
+      div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-right"] div[data-name="text"] p {
+        line-height: 1.8;
+        font-size: 0.9rem;
+        margin: 0 0 2rem 0; }
+      div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-right"] div[data-name="text"] a {
+        color: #FFFFFF;
+        background-color: #6500FF;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 0.5rem; }
+      div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-right"] div[data-name="text"] div[data-name="number"] {
+        position: absolute;
+        z-index: 0;
+        font-size: 19rem;
+        top: -5rem;
+        left: 4rem;
+        color: #6500FF;
+        opacity: 0.1;
+        font-family: "RubikBold"; }
+    div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-right"] div[data-name="image"] {
+      display: inline-block;
+      vertical-align: top;
+      width: 45%;
+      height: 28rem;
+      background-position: center center;
+      background-size: contain;
+      background-image: url("/static/assets/images/ourpeople.png");
+      background-repeat: no-repeat;
+      margin: 0 0 0 2rem; }
+      @media (max-width: 64em) {
+        div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-right"] div[data-name="image"] {
+          display: none; } }
+div[data-name="pages"] div[data-name="page-whatwedo"] {
+  padding: 5rem 0 5rem 0; }
+  div[data-name="pages"] div[data-name="page-whatwedo"] h3 {
+    border-radius: 1rem 0 1rem 0;
+    border: 0.4rem solid #6500FF;
+    color: #6500FF;
+    max-width: 15rem;
+    padding: 0.5rem;
+    font-family: "RubikBold";
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 0 auto 8rem auto; }
+    @media (max-width: 64em) {
+      div[data-name="pages"] div[data-name="page-whatwedo"] h3 {
+        font-size: 1.3rem;
+        margin: 0 auto 5rem auto; } }
+  div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options"] {
+    max-width: 64rem;
+    margin: 0 auto 10rem auto;
+    text-align: center; }
+    @media (max-width: 64em) {
+      div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options"] {
+        margin: 0 auto 5rem auto; } }
+    div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options"] div[data-name="option"] {
+      font-size: 1.2rem;
+      color: #CECECE;
+      font-family: "RubikBold";
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      min-width: 13.25rem; }
+      @media (max-width: 64em) {
+        div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options"] div[data-name="option"] {
+          font-size: 1rem;
+          min-width: 8rem; } }
+      @media (max-width: 40em) {
+        div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options"] div[data-name="option"] {
+          font-size: 1.3rem;
+          min-width: inherit;
+          display: block;
+          margin: 0 0 4rem 0; } }
+      div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options"] div[data-name="option"]:nth-child(2) {
+        margin-left: 6rem;
+        margin-right: 6rem; }
+        @media (max-width: 64em) {
+          div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options"] div[data-name="option"]:nth-child(2) {
+            margin-left: 2rem;
+            margin-right: 2rem; } }
+        @media (max-width: 40em) {
+          div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options"] div[data-name="option"]:nth-child(2) {
+            margin-left: 1rem;
+            margin-right: 1rem; } }
+      div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options"] div[data-name="option"].selected {
+        color: #000000; }
+        div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options"] div[data-name="option"].selected div {
+          bottom: -1rem;
+          width: 5rem;
+          left: 50%;
+          margin-left: -2.5rem;
+          height: 0.3rem;
+          border-radius: 0.3rem;
+          background-color: #000000;
+          position: absolute; }
+  div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options-content"] div[data-name="option-content"] div[data-name="banner"] {
+    width: 100%;
+    height: 15rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 5rem 0 0 0;
+    margin: 0 auto 8rem auto; }
+    @media (max-width: 64em) {
+      div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options-content"] div[data-name="option-content"] div[data-name="banner"] {
+        height: 10rem;
+        margin: 0 auto 5rem auto;
+        padding: 3rem 0 0 0; } }
+    div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options-content"] div[data-name="option-content"] div[data-name="banner"] div[data-name="title"] {
+      background: #FFFFFF;
+      box-shadow: 20px 40px 60px 0 rgba(0, 0, 0, 0.5);
+      max-width: 20rem;
+      padding: 1rem 2rem;
+      color: #6500FF;
+      font-size: 1.5rem;
+      margin: 0 auto;
+      text-align: center; }
+      @media (max-width: 64em) {
+        div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options-content"] div[data-name="option-content"] div[data-name="banner"] div[data-name="title"] {
+          font-size: 1rem;
+          padding: 1rem 1.5rem;
+          max-width: 20rem; } }
+  div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="suboptions-content"] div[data-name="suboption-content"] div[data-name="image"] {
+    max-width: 50rem;
+    width: 90%;
+    margin: 0 auto 3rem auto;
+    min-height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+    @media (max-width: 64em) {
+      div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="suboptions-content"] div[data-name="suboption-content"] div[data-name="image"] {
+        min-height: 20rem; } }
+    div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="suboptions-content"] div[data-name="suboption-content"] div[data-name="image"] div[data-name="box"] {
+      width: 90%;
+      max-width: 30rem;
+      padding: 3rem 3rem 5rem 3rem;
+      text-align: center;
+      border-radius: 2rem 0.2rem 2rem 0.2rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 0 auto;
+      top: 8rem;
+      position: relative; }
+      @media (max-width: 64em) {
+        div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="suboptions-content"] div[data-name="suboption-content"] div[data-name="image"] div[data-name="box"] {
+          padding: 3rem 2rem 5rem 2rem;
+          top: 3rem; } }
+      div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="suboptions-content"] div[data-name="suboption-content"] div[data-name="image"] div[data-name="box"] strong {
+        display: block;
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        color: #001BFF; }
+        @media (max-width: 64em) {
+          div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="suboptions-content"] div[data-name="suboption-content"] div[data-name="image"] div[data-name="box"] strong {
+            font-size: 1.3rem; } }
+  div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="suboptions-content"] div[data-name="suboption-content"] div[data-name="text"] {
+    max-width: 50rem;
+    width: 95%;
+    line-height: 1.8;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 0.9rem; }
+  div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="suboptions-content"] div[data-name="suboption-content"] div[data-name="arrows"] {
+    text-align: center;
+    margin: 0 auto 3rem auto; }
+    div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="suboptions-content"] div[data-name="suboption-content"] div[data-name="arrows"] div[data-name="left"] {
+      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
+      margin: 0 1rem;
+      display: inline-block;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("/static/assets/images/arrow-left-enabled.png"); }
+      div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="suboptions-content"] div[data-name="suboption-content"] div[data-name="arrows"] div[data-name="left"].disabled {
+        background-image: url("/static/assets/images/arrow-left-disabled.png"); }
+    div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="suboptions-content"] div[data-name="suboption-content"] div[data-name="arrows"] div[data-name="right"] {
+      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
+      margin: 0 1rem;
+      display: inline-block;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("/static/assets/images/arrow-right-enabled.png"); }
+      div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="suboptions-content"] div[data-name="suboption-content"] div[data-name="arrows"] div[data-name="right"].disabled {
+        background-image: url("/static/assets/images/arrow-right-disabled.png"); }
+div[data-name="pages"] div[data-name="page-defi"] {
+  padding: 0 0 20rem 0rem; }
+  @media (max-width: 64em) {
+    div[data-name="pages"] div[data-name="page-defi"] {
+      padding: 0 0 13rem 0rem; } }
+  div[data-name="pages"] div[data-name="page-defi"] h3 {
+    border-radius: 1rem 0 1rem 0;
+    border: 0.4rem solid #6500FF;
+    color: #6500FF;
+    max-width: 15rem;
+    padding: 0.5rem;
+    font-family: "RubikBold";
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 0 auto 8rem auto; }
+    @media (max-width: 64em) {
+      div[data-name="pages"] div[data-name="page-defi"] h3 {
+        font-size: 1.3rem;
+        margin: 0 auto 5rem auto; } }
+  div[data-name="pages"] div[data-name="page-defi"] div[data-name="image"] {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/static/assets/images/defi-section-background.png");
+    width: 100%;
+    height: 70vh;
+    padding: 5rem 2rem;
+    box-sizing: border-box;
+    position: relative; }
+    div[data-name="pages"] div[data-name="page-defi"] div[data-name="image"] div[data-name="text"] {
+      position: absolute;
+      bottom: -3rem;
+      width: 35rem;
+      color: #FFFFFF;
+      text-align: center;
+      line-height: 1.8;
+      left: 50%;
+      margin-left: -17.5rem;
+      z-index: 1;
+      font-size: 0.9rem; }
+      @media (max-width: 40em) {
+        div[data-name="pages"] div[data-name="page-defi"] div[data-name="image"] div[data-name="text"] {
+          width: 80%;
+          margin-left: -40%; } }
+      div[data-name="pages"] div[data-name="page-defi"] div[data-name="image"] div[data-name="text"] a {
+        color: #6500FF;
+        background-color: #FFFFFF;
+        display: inline-block;
+        padding: 0.8rem 2rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        font-size: 0.9rem; }
+    div[data-name="pages"] div[data-name="page-defi"] div[data-name="image"] img[data-name="text-background"] {
+      width: 100%;
+      position: absolute;
+      bottom: -10rem;
+      left: 0;
+      z-index: 0;
+      height: 20rem; }
+      @media (max-width: 64em) {
+        div[data-name="pages"] div[data-name="page-defi"] div[data-name="image"] img[data-name="text-background"] {
+          height: 25rem; } }
+div[data-name="pages"] div[data-name="page-contact"] h3 {
+  border-radius: 1rem 0 1rem 0;
+  border: 0.4rem solid #6500FF;
+  color: #6500FF;
+  max-width: 15rem;
+  padding: 0.5rem;
+  font-family: "RubikBold";
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 0 auto 8rem auto; }
+  @media (max-width: 64em) {
+    div[data-name="pages"] div[data-name="page-contact"] h3 {
+      font-size: 1.3rem;
+      margin: 0 auto 5rem auto; } }
+div[data-name="pages"] div[data-name="page-contact"] div[data-name="image"] {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/static/assets/images/contact-background.png");
+  width: 100%;
+  min-height: 100vh;
+  position: relative; }
+  div[data-name="pages"] div[data-name="page-contact"] div[data-name="image"] div[data-name="box"] {
+    width: 90%;
+    max-width: 35rem;
+    padding: 3rem 2rem 5rem 2rem;
+    text-align: center;
+    border-radius: 2rem 0.2rem 2rem 0.2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
+    top: 30vh;
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 20px 40px 60px 0 rgba(216, 216, 216, 0.5);
+    line-height: 1.8; }
+    div[data-name="pages"] div[data-name="page-contact"] div[data-name="image"] div[data-name="box"] p {
+      margin: 0 auto 2rem auto;
+      font-size: 0.9rem; }
+    div[data-name="pages"] div[data-name="page-contact"] div[data-name="image"] div[data-name="box"] a {
+      color: #FFFFFF;
+      background-color: #6500FF;
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-size: 0.9rem; }
+
+div[data-name="submenu-options"] {
+  margin: 1rem auto;
+  text-align: center;
+  display: block;
+  padding: 4rem 0 0 0; }
+  div[data-name="submenu-options"] a[data-name="submenu-option"] {
+    color: #000000;
+    font-family: "RubikBold";
+    position: relative;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1rem; }
+    div[data-name="submenu-options"] a[data-name="submenu-option"] div {
+      width: 3rem;
+      height: 0.3rem;
+      background-color: #000000;
+      border-radius: 0.3rem;
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      margin-left: -1.5rem;
+      display: none; }
+    div[data-name="submenu-options"] a[data-name="submenu-option"].selected {
+      color: #6500FF; }
+      div[data-name="submenu-options"] a[data-name="submenu-option"].selected div {
+        display: block;
+        background-color: #6500FF; }
+
+main[data-name="contactus"] > div[data-name="image"] {
+  width: 100%;
+  height: 70vh;
+  background-image: url("/static/assets/images/contactus-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  main[data-name="contactus"] > div[data-name="image"] h1 {
+    border-radius: 1rem 0 1rem 0;
+    border: 0.4rem solid #FFFFFF;
+    color: #FFFFFF;
+    max-width: 15rem;
+    padding: 0.5rem;
+    font-family: "RubikBold";
+    text-align: center;
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 40%; }
+    @media (max-width: 64em) {
+      main[data-name="contactus"] > div[data-name="image"] h1 {
+        font-size: 1.3rem;
+        margin: 0 auto 5rem auto; } }
+main[data-name="contactus"] article {
+  max-width: 45rem; }
+main[data-name="contactus"] div[data-name="submenu-options"] {
+  text-align: left;
+  margin: 0;
+  padding: 0; }
+  @media (max-width: 40em) {
+    main[data-name="contactus"] div[data-name="submenu-options"] {
+      text-align: center;
+      margin: 0 0 2rem 0; }
+      main[data-name="contactus"] div[data-name="submenu-options"] span {
+        display: block; } }
+  main[data-name="contactus"] div[data-name="submenu-options"] a[data-name="submenu-option"] {
+    font-size: 0.9rem;
+    max-width: none;
+    width: auto;
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 0;
+    cursor: pointer; }
+    main[data-name="contactus"] div[data-name="submenu-options"] a[data-name="submenu-option"] div {
+      bottom: -0.5rem; }
+main[data-name="contactus"] input {
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  display: block;
+  outline: none;
+  width: 100%;
+  border: 0.05rem solid #DDDDDD;
+  margin: 2rem 0 2rem 0; }
+  @media (max-width: 40em) {
+    main[data-name="contactus"] input {
+      box-shadow: none; } }
+main[data-name="contactus"] textarea {
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: block;
+  outline: none;
+  width: 100%;
+  border: 0.05rem solid #DDDDDD;
+  margin: 0 0 2rem 0;
+  min-height: 10rem; }
+  @media (max-width: 40em) {
+    main[data-name="contactus"] textarea {
+      box-shadow: none; } }
+main[data-name="contactus"] a.button {
+  color: #FFFFFF;
+  background-color: #6500FF;
+  display: block;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  max-width: 8rem;
+  text-align: center; }
+  main[data-name="contactus"] a.button[disabled] {
+    opacity: 0.3; }
+main[data-name="contactus"] p.message {
+  text-align: center; }
+
+main[data-name="ourmission"] > div[data-name="image"] {
+  width: 100%;
+  height: 80vh;
+  background-image: url("/static/assets/images/ourmission-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  @media (max-width: 64em) {
+    main[data-name="ourmission"] > div[data-name="image"] {
+      height: 70vh; } }
+  main[data-name="ourmission"] > div[data-name="image"] h1 {
+    border-radius: 1rem 0 1rem 0;
+    border: 0.4rem solid #FFFFFF;
+    color: #FFFFFF;
+    max-width: 15rem;
+    padding: 0.5rem;
+    font-family: "RubikBold";
+    text-align: center;
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 40%; }
+    @media (max-width: 64em) {
+      main[data-name="ourmission"] > div[data-name="image"] h1 {
+        font-size: 1.3rem;
+        margin: 0 auto 5rem auto; } }
+
+main[data-name="defi"] > div[data-name="image"] {
+  width: 100%;
+  height: 80vh;
+  background-image: url("/static/assets/images/defi-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  @media (max-width: 64em) {
+    main[data-name="defi"] > div[data-name="image"] {
+      height: 70vh; } }
+  main[data-name="defi"] > div[data-name="image"] h1 {
+    border-radius: 1rem 0 1rem 0;
+    border: 0.4rem solid #FFFFFF;
+    color: #FFFFFF;
+    max-width: 15rem;
+    padding: 0.5rem;
+    font-family: "RubikBold";
+    text-align: center;
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 40%; }
+    @media (max-width: 64em) {
+      main[data-name="defi"] > div[data-name="image"] h1 {
+        font-size: 1.3rem;
+        margin: 0 auto 5rem auto; } }
+
+main[data-name="bitcoin"] > div[data-name="image"] {
+  width: 100%;
+  height: 80vh;
+  background-image: url("/static/assets/images/bitcoin-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  @media (max-width: 64em) {
+    main[data-name="bitcoin"] > div[data-name="image"] {
+      height: 70vh; } }
+  main[data-name="bitcoin"] > div[data-name="image"] h1 {
+    border-radius: 1rem 0 1rem 0;
+    border: 0.4rem solid #FFFFFF;
+    color: #FFFFFF;
+    max-width: 15rem;
+    padding: 0.5rem;
+    font-family: "RubikBold";
+    text-align: center;
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 40%; }
+    @media (max-width: 64em) {
+      main[data-name="bitcoin"] > div[data-name="image"] h1 {
+        font-size: 1.3rem;
+        margin: 0 auto 5rem auto; } }
+
+main[data-name="ethereum"] > div[data-name="image"] {
+  width: 100%;
+  height: 80vh;
+  background-image: url("/static/assets/images/ethereum-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  @media (max-width: 64em) {
+    main[data-name="ethereum"] > div[data-name="image"] {
+      height: 70vh; } }
+  main[data-name="ethereum"] > div[data-name="image"] h1 {
+    border-radius: 1rem 0 1rem 0;
+    border: 0.4rem solid #FFFFFF;
+    color: #FFFFFF;
+    max-width: 15rem;
+    padding: 0.5rem;
+    font-family: "RubikBold";
+    text-align: center;
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 40%; }
+    @media (max-width: 64em) {
+      main[data-name="ethereum"] > div[data-name="image"] h1 {
+        font-size: 1.3rem;
+        margin: 0 auto 5rem auto; } }
+
+main[data-name="stablecoins"] > div[data-name="image"] {
+  width: 100%;
+  height: 80vh;
+  background-image: url("/static/assets/images/ourmission-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  @media (max-width: 64em) {
+    main[data-name="stablecoins"] > div[data-name="image"] {
+      height: 70vh; } }
+  main[data-name="stablecoins"] > div[data-name="image"] h1 {
+    border-radius: 1rem 0 1rem 0;
+    border: 0.4rem solid #FFFFFF;
+    color: #FFFFFF;
+    max-width: 15rem;
+    padding: 0.5rem;
+    font-family: "RubikBold";
+    text-align: center;
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: 40%; }
+    @media (max-width: 64em) {
+      main[data-name="stablecoins"] > div[data-name="image"] h1 {
+        font-size: 1.3rem;
+        margin: 0 auto 5rem auto; } }

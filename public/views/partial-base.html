@@ -1,0 +1,83 @@
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <base href="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{meta.title}}</title>
+    <meta name="description" content="{{meta.description}}">
+    <meta name="keywords" content="{{meta.keywords}}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="/static/assets/css/normalize.css">
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/static/assets/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/static/assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{meta.twitter}}">
+    <meta name="twitter:title" content="{{meta.ogtitle}}">
+    <meta name="twitter:description" content="{{meta.ogdescription}}">
+    <meta name="twitter:image:src" content="{{meta.ogimage}}">
+    <meta name="twitter:creator" content="{{meta.twitter}}">
+
+    <!-- Open Graph data -->
+    <meta name="description" content="{{meta.ogdescription}}" />
+    <meta property="og:title" content="{{meta.ogtitle}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{meta.ogurl}}" />
+    <meta property="og:image" content="{{meta.ogimage}}" />
+    <meta property="og:description" content="{{meta.ogdescription}}" />
+    <meta property="og:site_name" content="{{meta.ogtitle}}" />
+
+    <!-- Prevent HTML display until Angular has loaded -->
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+<body ng-app="Application" ng-cloak>
+    {{#block "body"}}
+        <div ng-view autoscroll="true"></div>
+    {{/block}}
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/assets/js/jquery/jquery-3.3.1.min.js"><\/script>')</script>
+    <script src="/static/assets/js/angular-1.6.9/angular.min.js"></script>
+    <script src="/static/assets/js/angular-1.6.9/angular-route.min.js"></script>
+    <script src="/static/assets/js/angular-1.6.9/angular-sanitize.min.js"></script>
+    <script src="/static/assets/js/app/factory.js"></script>
+    <script src="/static/assets/js/app/controllers.js"></script>
+    <script src="/static/assets/js/app/init.js"></script>
+    {{#block "scripts"}}{{/block}}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139825854-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-139825854-1');
+    </script>
+</body>
+</html>

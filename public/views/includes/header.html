@@ -1,0 +1,32 @@
+<header>
+    <div data-name="holder">
+        <a href="/" data-name="logo">
+            <div></div>
+        </a>
+        <div data-name="links">
+            <a href="/#whoweare" data-name="link">Who We Are</a>
+            <a href="/#whatwedo" data-name="link">What We Do</a>
+            <a href="/#defi" data-name="link">DeFi</a>
+            <a href="/contactus" data-name="link-contact">Contact</a>
+        </div>
+    </div>
+</header>
+<script>
+      (function( $ ) {
+          "use strict";
+
+          let $header = $("header");
+          let $htmlBody = $("html,body");
+          let $window = $(window);
+
+          $window.on("scroll", function() {
+              if ($htmlBody.scrollTop() > 250 && !$header.hasClass("alt")) {
+                  $header.addClass("alt")
+              }
+              else if ($htmlBody.scrollTop() < 250 && $header.hasClass("alt")) {
+                  $header.removeClass("alt")
+              }
+          })
+
+      })( jQuery )
+</script>

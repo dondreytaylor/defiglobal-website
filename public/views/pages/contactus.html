@@ -1,0 +1,26 @@
+<ng-include src="'/static/views/includes/header.html'"></ng-include>
+
+<main data-name="contactus" ng-controller="ContactController">
+    <div data-name="image">
+        <h1>Contact Us</h1>
+    </div>
+    <article ng-show="contact.submitted">
+        <p class="message">Thanks for reaching out! Your inquiry has been successfully submitted.</p>
+    </article>
+    <article ng-show="!contact.submitted">
+        <p>Have a question about digital currencies or just blockchain in general? Would you like to be contacted by the DeFi Global team about your financial needs?</p>
+        <p>Please submit the form below and we'll get back to you shortly!</p>
+        <div data-name="submenu-options">
+            <span>Select a category</span>
+            <a data-name="submenu-option" ng-click="contact.category = 'Advisory'" ng-class="{selected: contact.category == 'Advisory'}">Advisory <div></div></a>
+            <a data-name="submenu-option" ng-click="contact.category = 'Wealth Management'" ng-class="{selected: contact.category == 'Wealth Management'}">Wealth Management <div></div></a>
+            <a data-name="submenu-option" ng-click="contact.category = 'Investments'" ng-class="{selected: contact.category == 'Investments'}">Investments <div></div></a>
+            <a data-name="submenu-option" ng-click="contact.category = 'Other'" ng-class="{selected: contact.category == 'Other'}">Other <div></div></a>
+        </div>
+        <input type="text" ng-model="contact.email" placeholder="Please enter your email address...">
+        <textarea ng-model="contact.inquiry" placeholder="Type inquiry here..."></textarea>
+        <a href="javascript:void(0);" class="button" ng-click="contact.submit()" ng-disabled="!contact.email || !contact.inquiry" >Submit</a>
+    </article>
+</main>
+
+<ng-include src="'/static/views/includes/footer.html'"></ng-include>

@@ -1,0 +1,164 @@
+<ng-include src="'/static/views/includes/header.html'"></ng-include>
+
+<main ng-controller="LandingController">
+    <div data-name="pages">
+        <div data-name="page-intro">
+            <div data-name="box">
+                <h1>Your Path to <strong>Financial Freedom</strong></h1>
+                <a href="/contactus">Contact Us!</a>
+            </div>
+        </div>
+        <div data-name="page-independence">
+            <h2><strong>Independency</strong> through <strong>Crypto.</strong></h2>
+            <div data-name="map"></div>
+            <div data-name="text">
+                <p>The significance of cryptocurrencies in a wavering global economy is no longer debatable. Decentralized finance (DeFi) by way of blockchain technology will transform the way individuals and businesses operate around the world. <strong>We at DeFi Global are here to assist and guide you on your journey from the traditional system to self-sovereignty.</strong></p>
+                <div data-name="underline"></div>
+            </div>
+        </div>
+        <div data-name="page-whoweare" id="whoweare">
+            <h3>Who We Are</h3>
+            <div data-name="point-left">
+                <div data-name="text">
+                    <h4>Our Mission</h4>
+                    <p>The complexities and scarce education around cryptocurrencies and blockchain prevent many from taking the leap into the emerging digital world.</p>
+                    <p>Our mission at DeFi Global is to provide our clients with a comfortable understanding of the new <strong>decentralized financial system</strong>, to provide clarity and in-depth analysis of all <strong>benefits and risks</strong>, and to ensure <strong>security and privacy</strong> while investing in the asset class of tomorrow.</p>
+                    <a href="/ourmission">Learn More</a>
+                    <div data-name="number">1.</div>
+                </div>
+                <div data-name="image"></div>
+            </div>
+            <div data-name="point-right">
+                <div data-name="image"></div>
+                <div data-name="text">
+                    <h4>Our People</h4>
+                    <p>DeFi Global has a team of dedicated professionals with years of experience in the industry and specialties in <strong>finance, tech, and cryptoeconomics</strong>. Our established projects and accomplishments include: managing a cryptocurrency portfolio valued over $50M, developing two Ethereum-based platforms, a Bitcoin-based coin, and a hardware device for running Bitcoin/Ethereum nodes connected through a mobile app.</p>
+                    <div data-name="number">2.</div>
+                </div>
+            </div>
+        </div>
+        <div data-name="page-whatwedo" id="whatwedo">
+            <h3>What We Do</h3>
+            <div data-name="options">
+                <div data-name="option" ng-click="whatwedo.setSection(1)" ng-class="{selected: whatwedo.section === 1}">Advisory <div></div></div>
+                <div data-name="option" ng-click="whatwedo.setSection(2)" ng-class="{selected: whatwedo.section === 2}">Wealth Management <div></div></div>
+                <div data-name="option" ng-click="whatwedo.setSection(3)" ng-class="{selected: whatwedo.section === 3}">Investments <div></div></div>
+            </div>
+            <div data-name="options-content">
+                <div data-name="option-content" ng-show="whatwedo.section === 1">
+                    <div data-name="banner" style='background-image: url(/static/assets/images/advisory-banner.png)'>
+                        <div data-name="title">Advisory</div>
+                    </div>
+                    <div data-name="suboptions-content">
+                        <div data-name="suboption-content" ng-show="whatwedo.subsection === 1">
+                            <div data-name="image" style='background-image: url(/static/assets/images/advisory-image-1.png)'>
+                                <div data-name="box">
+                                    <strong>1.</strong>
+                                    <strong>Planning</strong>
+                                </div>
+                            </div>
+                            <div data-name="arrows">
+                                <div data-name="left" class="disabled"></div>
+                                <div data-name="right" ng-click="whatwedo.nextSubsection()"></div>
+                            </div>
+                            <div data-name="text">
+                                <p>The first step DeFi Global takes is getting to know you. We feel it is of utmost importance to build a strong relationship with you and earn your trust. In doing so, we develop a clear understanding of your <strong>goals, priorities, and vision</strong> for the future, all the while educating you on different aspects of <strong>decentralized finance and digital currencies</strong>. We then determine the appropriate course of action to help you achieve what is important to you.</p>
+                            </div>
+                        </div>
+                        <div data-name="suboption-content" ng-show="whatwedo.subsection === 2">
+                            <div data-name="image" style='background-image: url(/static/assets/images/advisory-image-2.png)'>
+                                <div data-name="box">
+                                    <strong>2.</strong>
+                                    <strong>Digital Asset Onboarding</strong>
+                                </div>
+                            </div>
+                            <div data-name="arrows">
+                                <div data-name="left" ng-click="whatwedo.previousSubsection()"></div>
+                                <div data-name="right" class="disabled"></div>
+                            </div>
+                            <div data-name="text">
+                                <p>Obtaining your first digital asset is your entrypoint to DeFi, providing you access to a financial system that is <strong>tamperproof and trustless</strong>, requiring <strong>no third parties</strong>. Your funds are kept <strong>secure and private</strong>. We will navigate you through aspects such as exchange markets, setting up wallets, how to send and receive assets, and much more. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-name="option-content" ng-show="whatwedo.section === 2">
+                    <div data-name="banner" style='background-image: url(/static/assets/images/wealthmanagement-banner.png)'>
+                        <div data-name="title">Wealth Management</div>
+                    </div>
+                    <div data-name="suboptions-content">
+                        <div data-name="suboption-content" ng-show="whatwedo.subsection === 1">
+                            <div data-name="image" style='background-image: url(/static/assets/images/wealthmanagement-image-1.png)'>
+                                <div data-name="box">
+                                    <strong>1.</strong>
+                                    <strong>Preservation and Growth</strong>
+                                </div>
+                            </div>
+                            <div data-name="arrows">
+                                <div data-name="left" class="disabled"></div>
+                                <div data-name="right" ng-click="whatwedo.nextSubsection()"></div>
+                            </div>
+                            <div data-name="text">
+                                <p>You have worked hard to accumulate your wealth. It is DeFi Global’s privilege to provide our expertise to help you achieve your goal of <strong>wealth preservation and protection</strong>. After understanding your needs and risk appetite, we develop a multi-pronged approach to ensure appropriate measures are taken to <strong>preserve and grow</strong> your wealth. Plans can be designed for the most risk averse to the least risk averse- DeFi Global has you covered.</p>
+                            </div>
+                        </div>
+                        <div data-name="suboption-content" ng-show="whatwedo.subsection === 2">
+                            <div data-name="image" style='background-image: url(/static/assets/images/wealthmanagement-image-2.png)'>
+                                <div data-name="box">
+                                    <strong>2.</strong>
+                                    <strong>Storage and Security</strong>
+                                </div>
+                            </div>
+                            <div data-name="arrows">
+                                <div data-name="left" ng-click="whatwedo.previousSubsection()"></div>
+                                <div data-name="right" class="disabled"></div>
+                            </div>
+                            <div data-name="text">
+                                <p>In order to prevent hacks, stolen funds, and lost private keys, we work together with you to form the best solution for keeping your digital assets <strong>safe, secure, and private</strong>. Whether utilizing cold storage, hardware wallets, multi-signature wallets, or a combination approach, we will establish <strong>best practices</strong> for you to <strong>safeguard your funds</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-name="option-content" ng-show="whatwedo.section === 3">
+                    <div data-name="banner" style='background-image: url(/static/assets/images/investments-banner.png)'>
+                        <div data-name="title">Investments</div>
+                    </div>
+                    <div data-name="suboptions-content">
+                        <div data-name="suboption-content" ng-show="whatwedo.subsection === 1">
+                            <div data-name="image"style='background-image: url(/static/assets/images/investments-image-1.png)'>
+                                <div data-name="box">
+                                    <strong>1.</strong>
+                                    <strong>Portfolio Management</strong>
+                                </div>
+                            </div>
+                            <div data-name="text">
+                                <p>As with any traditional investment strategy, <strong>diversification is key</strong>; this remains true for digital assets. Beyond Bitcoin and Ethereum, other innovative projects with different applications are always entering the fray. We are constantly researching and applying our understanding of blockchains and cryptoeconomics to evaluate new protocols. With our acumen for digital asset markets, we will work with you to build a <strong>diversification strategy</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-name="page-defi" id="defi">
+            <h3>DeFi</h3>
+            <div data-name="image">
+                <div data-name="text">
+                    <p>Decentralized finance, or <strong>DeFi</strong>, is traditional finance combined with the decentralized nature of <strong>blockchain technology</strong>. Why is decentralization important? The answer; <strong>sovereignty</strong>, <strong>security, and privacy</strong>. With DeFi, there are no intermediaries or institutions involved- meaning when you own a digital asset, you have <strong>100% control</strong>.</p>
+                    <a href="/info/defi">Learn More</a>
+                </div>
+                <img data-name="text-background" src="/static/assets/images/defi-section-bottom.png" />
+            </div>
+        </div>
+        <div data-name="page-contact">
+            <h3>Contact Us</h3>
+            <div data-name="image">
+                <div data-name="box">
+                    <p>Our aim is to break down the complexities of digital currencies into their simplest form. DeFi Global is here to fully understand your financial needs, and deliver services and solutions that help <strong>build, preserve, and manage your wealth through means of decentralized finance.</strong></p>
+                    <a href="/contactus">Get to know us!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<ng-include src="'/static/views/includes/footer.html'"></ng-include>
