@@ -200,8 +200,8 @@ div[data-name="pages"] div[data-name="page-independence"] {
       div[data-name="pages"] div[data-name="page-independence"] h2 {
         font-size: 1.2rem; } }
   div[data-name="pages"] div[data-name="page-independence"] div[data-name="map"] {
-    width: 38rem;
-    height: 35rem;
+    width: 30rem;
+    height: 30rem;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("/static/assets/images/crypto-map.png");
