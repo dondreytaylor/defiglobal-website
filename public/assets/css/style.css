@@ -117,6 +117,26 @@ header {
           header.alt div[data-name="holder"] div[data-name="links"] a[data-name="link-contact"]:hover {
             background-color: #5404ce;
             color: #FFFFFF; } }
+  @media (max-width: 40em) {
+    header {
+      background-color: #FFFFFF; }
+      header div[data-name="holder"] a[data-name="logo"] div {
+        background-image: url("/static/assets/images/defiglobal-logo-alt.png"); }
+      header div[data-name="holder"] div[data-name="links"] a {
+        color: #6500FF; }
+        header div[data-name="holder"] div[data-name="links"] a:hover {
+          color: #5404ce; }
+          header div[data-name="holder"] div[data-name="links"] a:hover.selected div {
+            background-color: #5404ce; }
+        header div[data-name="holder"] div[data-name="links"] a.selected div {
+          background-color: #6500FF; } }
+    @media (max-width: 40em) and (min-width: 64em) {
+      header div[data-name="holder"] div[data-name="links"] a[data-name="link-contact"] {
+        background-color: #6500FF;
+        color: #FFFFFF; }
+        header div[data-name="holder"] div[data-name="links"] a[data-name="link-contact"]:hover {
+          background-color: #5404ce;
+          color: #FFFFFF; } }
 
 footer {
   width: 100%;
