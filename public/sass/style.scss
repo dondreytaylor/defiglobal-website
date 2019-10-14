@@ -806,6 +806,13 @@ div[data-name="submenu-options"] {
             background-color: #6500FF;
           }
         }
+
+        &:hover {
+          div {
+            background-color: #000000;
+            display: block;
+          }
+        }
     }
 }
 
