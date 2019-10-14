@@ -652,7 +652,7 @@ div[data-name="submenu-options"] {
       div[data-name="submenu-options"] a[data-name="submenu-option"].selected div {
         display: block;
         background-color: #6500FF; }
-    div[data-name="submenu-options"] a[data-name="submenu-option"]:hover div {
+    div[data-name="submenu-options"] a[data-name="submenu-option"]:not(.selected):hover div {
       background-color: #000000;
       display: block; }
 

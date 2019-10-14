@@ -807,7 +807,7 @@ div[data-name="submenu-options"] {
           }
         }
 
-        &:hover {
+        &:not(.selected):hover {
           div {
             background-color: #000000;
             display: block;
