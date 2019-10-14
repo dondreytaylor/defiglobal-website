@@ -538,6 +538,15 @@ div[data-name="pages"] div[data-name="page-defi"] {
     padding: 5rem 2rem;
     box-sizing: border-box;
     position: relative; }
+    div[data-name="pages"] div[data-name="page-defi"] div[data-name="image"] > p {
+      max-width: 40rem;
+      width: 90%;
+      color: #FFFFFF;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 2;
+      top: 3rem;
+      position: relative; }
     div[data-name="pages"] div[data-name="page-defi"] div[data-name="image"] div[data-name="text"] {
       position: absolute;
       bottom: -3rem;
@@ -567,13 +576,10 @@ div[data-name="pages"] div[data-name="page-defi"] {
     div[data-name="pages"] div[data-name="page-defi"] div[data-name="image"] img[data-name="text-background"] {
       width: 100%;
       position: absolute;
-      bottom: -10rem;
+      bottom: -7rem;
       left: 0;
       z-index: 0;
-      height: 20rem; }
-      @media (max-width: 64em) {
-        div[data-name="pages"] div[data-name="page-defi"] div[data-name="image"] img[data-name="text-background"] {
-          height: 25rem; } }
+      height: 10rem; }
 div[data-name="pages"] div[data-name="page-contact"] h3 {
   border-radius: 1rem 0 1rem 0;
   border: 0.4rem solid #6500FF;

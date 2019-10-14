@@ -670,6 +670,17 @@ div[data-name="pages"] {
           padding: 5rem 2rem;
           box-sizing: border-box;
           position: relative;
+          & > p {
+              max-width: 40rem;
+              width: 90%;
+              color: #FFFFFF;
+              margin: 0 auto;
+              text-align: center;
+              line-height: 2;
+              top: 3rem;
+              position: relative;
+          }
+
           div[data-name="text"] {
               position: absolute;
               bottom: -3rem;
@@ -702,13 +713,10 @@ div[data-name="pages"] {
           img[data-name="text-background"] {
               width: 100%;
               position: absolute;
-              bottom: -10rem;
+              bottom: -7rem;
               left: 0;
               z-index: 0;
-              height: 20rem;
-              @media (max-width: $tablet) {
-                  height: 25rem;
-              }
+              height: 10rem;
           }
       }
   }
