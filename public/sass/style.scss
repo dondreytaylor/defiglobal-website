@@ -173,46 +173,6 @@ header {
           }
       }
   }
-
-  // @media (max-width: $mobile) {
-  //     background-color: #FFFFFF;
-  //     div[data-name="holder"] {
-  //         a[data-name="logo"] {
-  //             div {
-  //                 background-image: url('/static/assets/images/defiglobal-logo-alt.png');
-  //             }
-  //         }
-  //         div[data-name="links"] {
-  //             a {
-  //                 color: #6500FF;
-  //                 &:hover {
-  //                   color: #5404ce;
-  //                   &.selected {
-  //                       div {
-  //                         background-color: #5404ce;
-  //                       }
-  //                   }
-  //                 }
-  //                 &.selected {
-  //                     div {
-  //                       background-color: #6500FF;
-  //                     }
-  //                 }
-  //                 @media (min-width: $tablet) {
-  //                     &[data-name="link-contact"] {
-  //                         background-color: #6500FF;
-  //                         color: #FFFFFF;
-  //                         &:hover {
-  //                           background-color: #5404ce;
-  //                           color: #FFFFFF;
-  //                         }
-  //                     }
-  //                 }
-  //             }
-  //         }
-  //     }
-  // }
-
 }
 
 footer {
