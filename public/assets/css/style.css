@@ -19,11 +19,14 @@
   font-family: "RubikRegular";
   box-sizing: border-box; }
 
+html, body {
+  overflow-x: hidden; }
+
 strong {
   font-family: "RubikBold"; }
 
 header {
-  width: 100%;
+  width: 100vw;
   min-height: 5rem;
   position: fixed;
   z-index: 10;
