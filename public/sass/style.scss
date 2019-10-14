@@ -35,6 +35,10 @@ $tablet: 64em;
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 strong {
   font-family: "RubikBold";
 }
