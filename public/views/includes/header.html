@@ -11,22 +11,3 @@
         </div>
     </div>
 </header>
-<script>
-      (function( $ ) {
-          "use strict";
-
-          let $header = $("header");
-          let $htmlBody = $("html,body");
-          let $window = $(window);
-
-          $window.on("scroll", function() {
-              if ($htmlBody.scrollTop() > 250 && !$header.hasClass("alt")) {
-                  $header.addClass("alt")
-              }
-              else if ($htmlBody.scrollTop() < 250 && $header.hasClass("alt")) {
-                  $header.removeClass("alt")
-              }
-          })
-
-      })( jQuery )
-</script>

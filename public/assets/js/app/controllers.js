@@ -4,6 +4,21 @@ angular.module('Application.controllers', [])
 
 .controller("HeaderController", ["$scope", "$timeout", "$location", function($scope, $timeout, $location) {
       $scope.headerSelected = "#" + ($location.$$hash || "")
+
+      let $header = $("header");
+      let $htmlBody = $("html,body");
+      let $window = $(window);
+
+      $window.on("scroll", function() {
+
+          if ($window.scrollTop() > 250 && !$header.hasClass("alt")) {
+              $header.addClass("alt")
+          }
+          else if ($window.scrollTop() < 250 && $header.hasClass("alt")) {
+              $header.removeClass("alt")
+          }
+      })
+
 }])
 
 .controller("ContactController", ["$scope", "$timeout", function($scope, $timeout) {
@@ -46,5 +61,5 @@ angular.module('Application.controllers', [])
           previousSubsection: function() {
               this.subsection--
           }
-      }
+      };
 }])
