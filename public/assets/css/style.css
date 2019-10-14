@@ -39,6 +39,8 @@ header {
       width: 10rem;
       height: 2.7rem;
       display: inline-block; }
+      header div[data-name="holder"] a[data-name="logo"]:hover {
+        opacity: 0.8; }
       @media (max-width: 64em) {
         header div[data-name="holder"] a[data-name="logo"] {
           display: block;
@@ -61,7 +63,21 @@ header {
         text-decoration: none;
         font-size: 0.9rem;
         display: inline-block;
-        margin-left: 3rem; }
+        margin-left: 3rem;
+        position: relative;
+        font-family: "RubikMedium"; }
+        header div[data-name="holder"] div[data-name="links"] a:hover {
+          color: #F3F3F3; }
+          header div[data-name="holder"] div[data-name="links"] a:hover.selected div {
+            background-color: #F3F3F3; }
+        header div[data-name="holder"] div[data-name="links"] a.selected div {
+          position: absolute;
+          bottom: -0.5rem;
+          width: 2rem;
+          height: 0.2rem;
+          background-color: #FFFFFF;
+          left: 50%;
+          margin-left: -1rem; }
         @media (max-width: 64em) {
           header div[data-name="holder"] div[data-name="links"] a {
             margin: 1rem 0.5rem; } }
@@ -70,7 +86,10 @@ header {
             background-color: #FFFFFF;
             color: #6500FF;
             border-radius: 0.2rem;
-            padding: 0.5rem 1rem; } }
+            padding: 0.5rem 1rem; }
+            header div[data-name="holder"] div[data-name="links"] a[data-name="link-contact"]:hover {
+              background-color: #F3F3F3;
+              color: #6500FF; } }
       @media (max-width: 64em) {
         header div[data-name="holder"] div[data-name="links"] {
           float: none;
@@ -82,10 +101,19 @@ header {
       background-image: url("/static/assets/images/defiglobal-logo-alt.png"); }
     header.alt div[data-name="holder"] div[data-name="links"] a {
       color: #6500FF; }
+      header.alt div[data-name="holder"] div[data-name="links"] a:hover {
+        color: #5404ce; }
+        header.alt div[data-name="holder"] div[data-name="links"] a:hover.selected div {
+          background-color: #5404ce; }
+      header.alt div[data-name="holder"] div[data-name="links"] a.selected div {
+        background-color: #6500FF; }
       @media (min-width: 64em) {
         header.alt div[data-name="holder"] div[data-name="links"] a[data-name="link-contact"] {
           background-color: #6500FF;
-          color: #FFFFFF; } }
+          color: #FFFFFF; }
+          header.alt div[data-name="holder"] div[data-name="links"] a[data-name="link-contact"]:hover {
+            background-color: #5404ce;
+            color: #FFFFFF; } }
 
 footer {
   width: 100%;
@@ -122,7 +150,7 @@ article {
 
 div[data-name="pages"] div[data-name="page-intro"] {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-image: url("/static/assets/images/landing-background.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -150,7 +178,10 @@ div[data-name="pages"] div[data-name="page-intro"] {
       display: inline-block;
       padding: 1rem 2rem;
       text-decoration: none;
-      border-radius: 0.5rem; }
+      border-radius: 0.5rem;
+      font-family: "RubikBold"; }
+      div[data-name="pages"] div[data-name="page-intro"] div[data-name="box"] a:hover {
+        background-color: #5404ce; }
       @media (max-width: 64em) {
         div[data-name="pages"] div[data-name="page-intro"] div[data-name="box"] a {
           font-size: 0.9rem; } }
@@ -236,7 +267,10 @@ div[data-name="pages"] div[data-name="page-whoweare"] {
         display: inline-block;
         padding: 1rem 1.5rem;
         text-decoration: none;
-        border-radius: 0.5rem; }
+        border-radius: 0.5rem;
+        font-family: "RubikBold"; }
+        div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-left"] div[data-name="text"] a:hover {
+          background-color: #5404ce; }
       div[data-name="pages"] div[data-name="page-whoweare"] div[data-name="point-left"] div[data-name="text"] div[data-name="number"] {
         position: absolute;
         z-index: 0;
@@ -342,6 +376,8 @@ div[data-name="pages"] div[data-name="page-whatwedo"] {
       cursor: pointer;
       position: relative;
       min-width: 13.25rem; }
+      div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options"] div[data-name="option"]:not(.selected):hover {
+        color: #666666; }
       @media (max-width: 64em) {
         div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options"] div[data-name="option"] {
           font-size: 1rem;
@@ -395,7 +431,8 @@ div[data-name="pages"] div[data-name="page-whatwedo"] {
       color: #6500FF;
       font-size: 1.5rem;
       margin: 0 auto;
-      text-align: center; }
+      text-align: center;
+      font-family: "RubikBold"; }
       @media (max-width: 64em) {
         div[data-name="pages"] div[data-name="page-whatwedo"] div[data-name="options-content"] div[data-name="option-content"] div[data-name="banner"] div[data-name="title"] {
           font-size: 1rem;
@@ -520,7 +557,10 @@ div[data-name="pages"] div[data-name="page-defi"] {
         padding: 0.8rem 2rem;
         text-decoration: none;
         border-radius: 0.5rem;
-        font-size: 0.9rem; }
+        font-size: 0.9rem;
+        font-family: "RubikBold"; }
+        div[data-name="pages"] div[data-name="page-defi"] div[data-name="image"] div[data-name="text"] a:hover {
+          background-color: #F3F3F3; }
     div[data-name="pages"] div[data-name="page-defi"] div[data-name="image"] img[data-name="text-background"] {
       width: 100%;
       position: absolute;
@@ -576,7 +616,10 @@ div[data-name="pages"] div[data-name="page-contact"] div[data-name="image"] {
       padding: 0.8rem 2rem;
       text-decoration: none;
       border-radius: 0.5rem;
-      font-size: 0.9rem; }
+      font-size: 0.9rem;
+      font-family: "RubikBold"; }
+      div[data-name="pages"] div[data-name="page-contact"] div[data-name="image"] div[data-name="box"] a:hover {
+        background-color: #5404ce; }
 
 div[data-name="submenu-options"] {
   margin: 1rem auto;
@@ -609,7 +652,7 @@ div[data-name="submenu-options"] {
 
 main[data-name="contactus"] > div[data-name="image"] {
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   background-image: url("/static/assets/images/contactus-background.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -650,6 +693,9 @@ main[data-name="contactus"] div[data-name="submenu-options"] {
     cursor: pointer; }
     main[data-name="contactus"] div[data-name="submenu-options"] a[data-name="submenu-option"] div {
       bottom: -0.5rem; }
+    main[data-name="contactus"] div[data-name="submenu-options"] a[data-name="submenu-option"]:not(.selected):hover div {
+      display: block;
+      background-color: #000000; }
 main[data-name="contactus"] input {
   background: #FFFFFF;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
@@ -659,6 +705,8 @@ main[data-name="contactus"] input {
   width: 100%;
   border: 0.05rem solid #DDDDDD;
   margin: 2rem 0 2rem 0; }
+  main[data-name="contactus"] input:focus {
+    border-color: #6500FF; }
   @media (max-width: 40em) {
     main[data-name="contactus"] input {
       box-shadow: none; } }
@@ -672,6 +720,8 @@ main[data-name="contactus"] textarea {
   border: 0.05rem solid #DDDDDD;
   margin: 0 0 2rem 0;
   min-height: 10rem; }
+  main[data-name="contactus"] textarea:focus {
+    border-color: #6500FF; }
   @media (max-width: 40em) {
     main[data-name="contactus"] textarea {
       box-shadow: none; } }
@@ -684,7 +734,10 @@ main[data-name="contactus"] a.button {
   border-radius: 0.5rem;
   margin: 0 auto;
   max-width: 8rem;
-  text-align: center; }
+  text-align: center;
+  font-family: "RubikBold"; }
+  main[data-name="contactus"] a.button:hover {
+    background-color: #5404ce; }
   main[data-name="contactus"] a.button[disabled] {
     opacity: 0.3; }
 main[data-name="contactus"] p.message {
@@ -692,10 +745,11 @@ main[data-name="contactus"] p.message {
 
 main[data-name="ourmission"] > div[data-name="image"] {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-image: url("/static/assets/images/ourmission-background.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   position: relative; }
   @media (max-width: 64em) {
     main[data-name="ourmission"] > div[data-name="image"] {
@@ -718,10 +772,11 @@ main[data-name="ourmission"] > div[data-name="image"] {
 
 main[data-name="defi"] > div[data-name="image"] {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-image: url("/static/assets/images/defi-background.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   position: relative; }
   @media (max-width: 64em) {
     main[data-name="defi"] > div[data-name="image"] {
@@ -744,10 +799,11 @@ main[data-name="defi"] > div[data-name="image"] {
 
 main[data-name="bitcoin"] > div[data-name="image"] {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-image: url("/static/assets/images/bitcoin-background.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   position: relative; }
   @media (max-width: 64em) {
     main[data-name="bitcoin"] > div[data-name="image"] {
@@ -770,10 +826,11 @@ main[data-name="bitcoin"] > div[data-name="image"] {
 
 main[data-name="ethereum"] > div[data-name="image"] {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-image: url("/static/assets/images/ethereum-background.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   position: relative; }
   @media (max-width: 64em) {
     main[data-name="ethereum"] > div[data-name="image"] {
@@ -796,10 +853,11 @@ main[data-name="ethereum"] > div[data-name="image"] {
 
 main[data-name="stablecoins"] > div[data-name="image"] {
   width: 100%;
-  height: 80vh;
-  background-image: url("/static/assets/images/ourmission-background.png");
+  height: 90vh;
+  background-image: url("/static/assets/images/stablecoins-background.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   position: relative; }
   @media (max-width: 64em) {
     main[data-name="stablecoins"] > div[data-name="image"] {

@@ -1,13 +1,13 @@
-<header>
+<header ng-controller="HeaderController">
     <div data-name="holder">
         <a href="/" data-name="logo">
             <div></div>
         </a>
         <div data-name="links">
-            <a href="/#whoweare" data-name="link">Who We Are</a>
-            <a href="/#whatwedo" data-name="link">What We Do</a>
-            <a href="/#defi" data-name="link">DeFi</a>
-            <a href="/contactus" data-name="link-contact">Contact</a>
+            <a href="/#whoweare" ng-click="headerSelected = '#whoweare'" ng-class="{'selected': headerSelected == '#whoweare'}" data-name="link">Who We Are <div></div></a>
+            <a href="/#whatwedo" ng-click="headerSelected = '#whatwedo'" ng-class="{'selected': headerSelected == '#whatwedo'}" data-name="link">What We Do <div></div></a>
+            <a href="/#defi" ng-click="headerSelected = '#defi'" ng-class="{'selected': headerSelected == '#defi'}" data-name="link">DeFi <div></div></a>
+            <a href="/contactus" target="_blank" ng-click="headerSelected = '#contactus'" data-name="link-contact">Contact</a>
         </div>
     </div>
 </header>

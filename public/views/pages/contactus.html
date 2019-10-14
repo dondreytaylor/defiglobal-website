@@ -19,7 +19,7 @@
         </div>
         <input type="text" ng-model="contact.email" placeholder="Please enter your email address...">
         <textarea ng-model="contact.inquiry" placeholder="Type inquiry here..."></textarea>
-        <a href="javascript:void(0);" class="button" ng-click="contact.submit()" ng-disabled="!contact.email || !contact.inquiry" >Submit</a>
+        <a href="javascript:void(0);" class="button" ng-click="contact.submit()" ng-disabled="!contact.email || !contact.inquiry || !contact.isEmailValid()" >Submit</a>
     </article>
 </main>
 

@@ -2,15 +2,22 @@
 
 angular.module('Application.controllers', [])
 
+.controller("HeaderController", ["$scope", "$timeout", "$location", function($scope, $timeout, $location) {
+      $scope.headerSelected = "#" + ($location.$$hash || "")
+}])
+
 .controller("ContactController", ["$scope", "$timeout", function($scope, $timeout) {
     $scope.contact = {
       category: "Advisory",
       email: "",
       inquiry: "",
       submitted: false,
+      isEmailValid: function() {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email)
+      },
       submit: function() {
           let that = this;
-          if (this.email && this.inquiry) {
+          if (this.email && this.inquiry && this.isEmailValid()) {
               this.submitted = true;
               $.post("/form/submit", {
                   email: that.email,
