@@ -62,4 +62,12 @@ angular.module('Application.controllers', [])
               this.subsection--
           }
       };
+
+      $scope.disclaimer = {
+          isVisible: !localStorage.getItem("disclaimer-accept"),
+          accept: function() {
+              this.isVisible = false;
+              localStorage.setItem("disclaimer-accept", true);
+          }
+      };
 }])

@@ -184,7 +184,7 @@ footer {
   div[data-name="logo"] {
       width: 12rem;
       height: 4rem;
-      margin: 0 auto 1rem auto;
+      margin: 0 auto 0 auto;
       background-position: center center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -193,6 +193,19 @@ footer {
           width: 10rem;
           height: 3rem;
       }
+  }
+
+  div[data-name="disclaimer"] {
+    max-width: 25rem;
+    margin: 0 auto 2rem auto;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    width: 95%;
+    color: #666666;
+    a {
+      color: #6500FF;
+      text-decoration: none;
+    }
   }
 
   div[data-name="copyright"] {
@@ -213,6 +226,51 @@ article {
     color: #6500FF;
     font-size: 1.5rem;
   }
+}
+
+div[data-name="disclaimer-overlay"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255,255,255,0.98);
+    z-index: 100;
+
+    div[data-name="logo"] {
+        width: 10rem;
+        height: 3rem;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('/static/assets/images/defiglobal-logo-alt.png');
+        margin: 2rem;
+    }
+
+    div[data-name="content"] {
+      max-width: 32rem;
+      width: 85%;
+      font-size: 0.9rem;
+      line-height: 2;
+      display: block;
+      margin: 5rem auto 0 auto;
+      
+      a.button {
+        color: #FFFFFF;
+        background-color: #6500FF;
+        display: block;
+        padding: 0.5rem 2rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        margin: 2rem auto;
+        max-width: 8rem;
+        text-align: center;
+        font-family: "RubikBold";
+        &:hover {
+            background-color: #5404ce;
+        }
+      }
+    }
 }
 
 div[data-name="pages"] {
