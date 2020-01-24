@@ -184,7 +184,8 @@ div[data-name="disclaimer-overlay"] {
     font-size: 0.9rem;
     line-height: 2;
     display: block;
-    margin: 5rem auto 0 auto; }
+    margin: 5rem auto 0 auto;
+    text-align: center; }
     div[data-name="disclaimer-overlay"] div[data-name="content"] a.button {
       color: #FFFFFF;
       background-color: #6500FF;
