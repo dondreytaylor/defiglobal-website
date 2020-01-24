@@ -141,7 +141,8 @@ footer {
     font-size: 0.9rem;
     line-height: 1.8;
     width: 95%;
-    color: #666666; }
+    color: #666666;
+    text-align: center; }
     footer div[data-name="disclaimer"] a {
       color: #6500FF;
       text-decoration: none; }
