@@ -35,6 +35,12 @@ $tablet: 64em;
   box-sizing: border-box;
 }
 
+html.hide-scroll {
+  &, body {
+    overflow: hidden;
+  }
+}
+
 html, body {
   overflow-x: hidden;
 }
@@ -227,6 +233,138 @@ article {
     color: #6500FF;
     font-size: 1.5rem;
   }
+}
+
+div[data-name="team-overlay"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.8);
+
+  a[data-name="close"] {
+      display: block;
+      position: absolute;
+      right: 2.5rem;
+      top: 2rem;
+      font-size: 2rem;
+      color: #CCCCCC;
+  }
+
+  div[data-name="background"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      cursor: pointer;
+      @media (max-width: 40em) {
+        min-height: 100%;
+      }
+  }
+
+  div[data-name="content"] {
+      background-color: #FFFFFF;
+      position: absolute;
+      width: 90%;
+      max-width: 64rem;
+      min-height: 15rem;
+      top: 10%;
+      left: 50%;
+      margin-left: -45%;
+      background-color: #FFFFFF;
+      z-index: 2;
+      box-sizing: border-box;
+      padding: 1rem 0 4rem 0;
+      margin-bottom: 3rem;
+
+      @media (min-width: 64rem) {
+          margin-left: -32rem;
+      }
+
+      div[data-name="details"] {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+
+          @media (max-width: 40em) {
+            flex-direction: column;
+
+            div[data-name="image"] {
+                margin: 3rem auto;
+            }
+          }
+
+          div[data-name="image"] {
+              width: 16rem;
+              height: 18rem;
+              margin: 3rem;
+              background-position: center center;
+              background-size: cover;
+              background-repeat: no-repeat;
+          }
+
+          div[data-name="bio"] {
+              width: 65%;
+              box-sizing: border-box;
+              padding: 0 2rem 0 1rem;
+              margin: 0 auto;
+
+              @media (max-width: 40em) {
+                  width: 90%;
+              }
+
+              strong {
+                display: block;
+                font-size: 1.5rem;
+                color: #000000;
+                font-family: "RubikMedium";
+                margin: 3rem 0 0.2rem 0;
+
+                @media (max-width: 40em) {
+                    margin: 1rem 0 0.2rem 0;
+                }
+
+              }
+
+              span {
+                display: block;
+                font-size: 0.9rem;
+                color: #666666;
+                font-family: "RubikLight";
+              }
+
+              p {
+                font-size: 0.9rem;
+                line-height: 1.5;
+              }
+
+              a {
+                  color: #FFFFFF;
+                  background-color: #6500FF;
+                  width: 3rem;
+                  height: 3rem;
+                  font-size: 1rem;
+                  box-sizing: border-box;
+                  padding: 1rem;
+                  text-align: center;
+                  border-radius: 3rem;
+                  display: block;
+                  opacity: 0.8;
+                  margin: 1.5rem 0 0 0;
+                  &:hover {
+                    opacity: 1;
+                  }
+              }
+
+          }
+      }
+  }
+
 }
 
 div[data-name="disclaimer-overlay"] {
@@ -837,6 +975,72 @@ div[data-name="pages"] {
               }
             }
         }
+      }
+  }
+
+  div[data-name="page-team"] {
+      h3 {
+          border-radius: 1rem 0 1rem 0;
+          border: 0.4rem solid #6500FF;
+          color: #6500FF;
+          max-width: 15rem;
+          padding: 0.5rem;
+          font-family: "RubikBold";
+          text-align: center;
+          font-size: 1.8rem;
+          margin: 0 auto 3rem auto;
+          @media (max-width: $tablet) {
+              font-size: 1.3rem;
+              margin: 0 auto 5rem auto;
+          }
+      }
+
+      div[data-name="team"] {
+          max-width: 64rem;
+          margin: 0 auto;
+          text-align: center;
+          padding: 8rem 0 15rem 0;
+
+          div[data-name="member"] {
+              display: inline-block;
+              vertical-align: top;
+              margin: 0 1.2rem 1rem 1.2rem;
+              text-align: left;
+
+              div[data-name="image"] {
+                  width: 12.5rem;
+                  height: 14.5rem;
+                  background-color: #EEEEEE;
+                  margin: 0 0 1rem 0;
+                  display: block;
+                  background-position: center center;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  transition: all 0.5s ease;
+                  opacity: 0.85;
+                  cursor: pointer;
+
+                  &:hover {
+                      transition: all 0.5s ease;
+                      opacity: 1;
+                  }
+              }
+
+              strong {
+                display: block;
+                font-size: 0.95rem;
+                color: #000000;
+                font-family: "RubikMedium";
+                margin: 0 0 0.2rem 0;
+              }
+
+              span {
+                display: block;
+                font-size: 0.9rem;
+                color: #666666;
+                font-family: "RubikLight";
+              }
+          }
       }
   }
 

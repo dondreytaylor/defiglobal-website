@@ -70,4 +70,15 @@ angular.module('Application.controllers', [])
               localStorage.setItem("disclaimer-accept", true);
           }
       };
+
+      $scope.$watch("teamShow", function() {
+          if (typeof $scope.teamShow === "string") {
+              if ($scope.teamShow != '') {
+                  $("html").attr("class", "hide-scroll")
+              }
+              else {
+                  $("html").attr("class", "")
+              }
+          }
+      })
 }])

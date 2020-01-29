@@ -85,7 +85,7 @@ var initialization = async function() {
 					if (email && category && inquiry) {
 							let info =  transporter.sendMail({
 									from: 'defiglobalco@gmail.com', // sender address
-									to: 'defiglobalco@gmail.com', // list of receivers
+									to: 'business@defiglobal.co', // list of receivers
 									subject: '[' + category + '] DeFi Global Contact <> ' + email, // Subject line
 									text: inquiry, // plain text body
 									html: 'Contact us inquiry by <strong>' + email + '</strong><br><p>' + inquiry + '</p>' // html body

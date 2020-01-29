@@ -149,6 +149,31 @@
                 <img data-name="text-background" src="/static/assets/images/defi-section-bottom.png" />
             </div>
         </div>
+        <div data-name="page-team">
+            <h3>Team</h3>
+            <div data-name="team">
+                <div data-name="member" ng-click="teamShow = 'sachit'">
+                    <div data-name="image" style="background-image: url('/static/assets/images/team/team_sachit.jpg')"></div>
+                    <strong>Sachit Singh</strong>
+                    <span>Co-Founder, Partner</span>
+                </div>
+                <div data-name="member" ng-click="teamShow = 'scott'">
+                    <div data-name="image" style="background-image: url('/static/assets/images/team/team_scott.jpg')"></div>
+                    <strong>Scott Wade</strong>
+                    <span>Co-Founder, Partner</span>
+                </div>
+                <div data-name="member" ng-click="teamShow = 'samit'">
+                    <div data-name="image" style="background-image: url('/static/assets/images/team/team_samit.png')"></div>
+                    <strong>Samit Singh</strong>
+                    <span>Co-Founder, Partner</span>
+                </div>
+                <div data-name="member" ng-click="teamShow = 'dondrey'">
+                    <div data-name="image" style="background-image: url('/static/assets/images/team/team_dondrey.jpg')"></div>
+                    <strong>Dondrey Taylor</strong>
+                    <span>Co-Founder, Partner</span>
+                </div>
+            </div>
+        </div>
         <div data-name="page-contact">
             <h3>Contact Us</h3>
             <div data-name="image">
@@ -166,6 +191,94 @@
             <a href="javascript:void(0);" class="button" ng-click="disclaimer.accept()">Continue</a>
         </div>
     </div>
+
+    <div data-name="team-overlay" ng-show="teamShow === 'sachit'">
+        <div data-name="background" ng-click="teamShow = ''"></div>
+        <div data-name="content">
+            <a href="javascript:void(0);" data-name="close" ng-click="teamShow = ''">
+                <i class="fas fa-times"></i>
+            </a>
+            <div data-name="details">
+                <div data-name="image" style="background-image: url('/static/assets/images/team/team_sachit.jpg')"></div>
+                <div data-name="bio">
+                    <strong>Sachit Singh</strong>
+                    <span>Co-Founder, Partner</span>
+                    <p>Sachit is a 2016 Finance graduate from Pennsylvania State University. He is highly-skilled professional in the digital asset/blockchain space, with vast experience via several start-ups. Sachit has been involved in the cryptocurrency space full-time now for over 3 years with previous experience as a Financial Analyst. His passion for blockchains and decentralized networks began through a background of mining and handling a large-scale mining operation. In October of 2017, he attended DevCon3 in Cancun, Mexico, and began to truly believe in the future of Ethereum. Sachit is currently the Operations Lead of Bithereum, a fork of BTC, as well as a core team member and Operations Lead at nimbleNODE.io. His goal is to further the advancement of crypto and abstract it in any way possible to deliver easy-to-use solutions for the everyday consumer.</p>
+                    <p>This has led him down the path of decentralized finance in Ethereum, and ultimately DeFi Global- where his deep knowledge and passion of both blockchain and finance could be leveraged to empower others and walk them through the slippery-slope of dealing with digital assets. Sachit has assisted in the management of several high net-worth portfolios till date, and always extends a hand to anyone looking for further insight and assistance in the space.</p>
+                    <a href="https://www.linkedin.com/in/sachit-singh-b2a873ab" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-name="team-overlay" ng-show="teamShow === 'scott'">
+        <div data-name="background" ng-click="teamShow = ''"></div>
+        <div data-name="content">
+            <a href="javascript:void(0);" data-name="close" ng-click="teamShow = ''">
+                <i class="fas fa-times"></i>
+            </a>
+            <div data-name="details">
+                <div data-name="image" style="background-image: url('/static/assets/images/team/team_scott.jpg')"></div>
+                <div data-name="bio">
+                    <strong>Scott Wade</strong>
+                    <span>Co-Founder, Partner</span>
+                    <p>Scott blends his experience in blockchain technology and economics to approach DeFi and digital assets from a unique angle. Prior to DeFi Global, Scott had worked as a strategist for three projects including an Ethereum dApp, Bitcoin fork, and a consumer hardware device, which bolstered his knowledge of this emerging technology. With his economic background along with his analytical mindset, he has also provided immense value to multiple clients in regards to portfolio management strategies of digital assets.</p>
+                    <p>Having obtained an Economics degree from The Pennsylvania State University in 2016, where he was involved with the Investment Association, Asset Management Club, and Bitcoin Club, Scott has developed a deep understanding of digital assets at both the micro and macro levels. He has attended various meet-ups and conferences throughout the world in North and South America, Europe, and Asia. As a result, he has seen the benefits of decentralized finance for all economic conditions first-hand.</p>
+                    <p>Scott believes that trust and communication are paramount for business relationships and will work with you to ensure you are comfortable with digital assets, before tailoring a personalized strategy to maximize your wants and needs.</p>
+                    <a href="https://www.linkedin.com/in/scott-wade-401b20105/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-name="team-overlay" ng-show="teamShow === 'samit'">
+        <div data-name="background" ng-click="teamShow = ''"></div>
+        <div data-name="content">
+            <a href="javascript:void(0);" data-name="close" ng-click="teamShow = ''">
+                <i class="fas fa-times"></i>
+            </a>
+            <div data-name="details">
+                <div data-name="image" style="background-image: url('/static/assets/images/team/team_samit.png')"></div>
+                <div data-name="bio">
+                    <strong>Samit Singh</strong>
+                    <span>Co-Founder, Partner</span>
+                    <p>Samit is an experienced business strategist and product developer who co-founded a messaging app startup called MiniChat, Inc., along with one of his current partners. Together, they also created a video and photo app called Tack Video. He has 8+ years of startup experience, having worked at other internet startups before this. He closely follows patterns in UI/UX design, mobile technology, and emerging technology- especially all the unique ways in which we can explore social interaction and incentivized networks. This is what eventually led to his love of blockchain technology, cryptocurrencies, and consensus design. Overall, his well-rounded experience spans everything from web and mobile design to building business that serve users at scale.</p>
+                    <p>As of now, he designs DNN’s interface and helps define its overall vision. In addition, he also handles product and design for nimbleNODE, as well as working with the same team to bring DeFi awareness to the world with DeFi Global. He has spoken at large-scale blockchain conferences, such as the World Blockchain Forum, to help spread further awareness of blockchains and their use cases. Currently, his primary focus is on all things blockchain and Ethereum, as well as how this incredible technology can impact society as a whole. Samit places exceptional importance on simple products that can be used by any consumer.</p>
+                    <a href="https://www.linkedin.com/in/singhsamit" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-name="team-overlay" ng-show="teamShow === 'dondrey'">
+        <div data-name="background" ng-click="teamShow = ''"></div>
+        <div data-name="content">
+            <a href="javascript:void(0);" data-name="close" ng-click="teamShow = ''">
+                <i class="fas fa-times"></i>
+            </a>
+            <div data-name="details">
+                <div data-name="image" style="background-image: url('/static/assets/images/team/team_dondrey.jpg')"></div>
+                <div data-name="bio">
+                    <strong>Dondrey Taylor</strong>
+                    <span>Co-Founder, Partner</span>
+                    <p>Throughout the years, Dondrey has worked as a seasoned web and mobile full stack developer and consultant for various tech startups on the east coast of the US. He is currently the CTO of CapWay- a mobile focused bank that provides financial opportunities for those that are unbanked or underbanked in the United States.</p>
+                    <p>He has been involved with blockchains and cryptocurrencies for the past 4 years. Together with his business partner, he started a company called Decentralized News Network- a collaborative news platform that addresses systemic issues in media.</p>
+                    <p>Dondrey has worked on a number of large scale financial applications involving cryptocurrency and brings with him an area of expertise that is helpful for maneuvering through the emerging world of Decentralized Finance. He holds a Bachelor of Science in Information Technology with a specialization in systems architecture from New Jersey Institute of Technology.</p>
+                    <a href="https://www.linkedin.com/in/dondreytaylor" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </main>
 
 <ng-include src="'/static/views/includes/footer.html'"></ng-include>
