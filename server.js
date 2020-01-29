@@ -92,8 +92,10 @@ var initialization = async function() {
 							});
 							info
 								.then(function(data) {
+										console.log(data);
 								})
 								.catch(function() {
+										console.log("Email sending error.")
 								})
 					}
 
