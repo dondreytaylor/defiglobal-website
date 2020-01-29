@@ -804,7 +804,7 @@ div[data-name="pages"] div[data-name="page-team"] div[data-name="team"] {
   div[data-name="pages"] div[data-name="page-team"] div[data-name="team"] div[data-name="member"] {
     display: inline-block;
     vertical-align: top;
-    margin: 0 1.2rem 1rem 1.2rem;
+    margin: 0 1.2rem 2rem 1.2rem;
     text-align: left; }
     div[data-name="pages"] div[data-name="page-team"] div[data-name="team"] div[data-name="member"] div[data-name="image"] {
       width: 12.5rem;
