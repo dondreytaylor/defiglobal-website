@@ -96,6 +96,7 @@ var initialization = async function() {
 								})
 								.catch(function() {
 										console.log("Email sending error.")
+										console.log(arguments);
 								})
 					}
 
