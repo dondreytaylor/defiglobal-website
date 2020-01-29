@@ -92,11 +92,11 @@ var initialization = async function() {
 							});
 							info
 								.then(function(data) {
-										console.log(data);
+										// console.log(data);
 								})
 								.catch(function() {
-										console.log("Email sending error.")
-										console.log(arguments);
+										// console.log("Email sending error.")
+										// console.log(arguments);
 								})
 					}
 
