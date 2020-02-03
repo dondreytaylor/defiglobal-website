@@ -249,9 +249,10 @@ div[data-name="video"] {
         min-width: 100%;
         min-height: 100%;
         width: auto;
-        height: auto;
+        height: inherit;
         z-index: 0;
         transform: translateX(-50%) translateY(-50%);
+        object-fit: cover;
 
         @media (max-width: 40em) {
             display: none;
@@ -460,7 +461,12 @@ div[data-name="pages"] {
       overflow: hidden;
 
       @media (max-width: 40em) {
-          background-image: url(/static/assets/images/background-image.gif);
+          & {
+              background-image: url(/static/assets/videos/background-video.gif);
+          }
+          &.alt-2 {
+              background-image: url(/static/assets/videos/background-video-2.gif);
+          }
       }
 
       div[data-name="box"] {
@@ -472,8 +478,15 @@ div[data-name="pages"] {
           background-color: rgba(255,255,255,0.9);
           margin: 0 auto;
           top: 30%;
-          position: relative;
+          position: absolute;
+          left: 50%;
+          margin-left: -15rem;
           z-index: 2;
+
+          @media (max-width: 40em) {
+              margin-left: -45%;
+              max-width: 90%;
+          }
 
           h1 {
             font-size: 1.4rem;

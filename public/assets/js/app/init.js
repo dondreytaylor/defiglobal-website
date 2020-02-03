@@ -15,6 +15,9 @@ config(['$locationProvider', '$interpolateProvider', '$routeProvider', function(
       .when("/", {
           templateUrl : "/static/views/pages/landing.html"
       })
+      .when("/landing2", {
+          templateUrl : "/static/views/pages/landing-2.html"
+      })
       .when("/ourmission", {
           templateUrl : "/static/views/pages/ourmission.html"
       })
