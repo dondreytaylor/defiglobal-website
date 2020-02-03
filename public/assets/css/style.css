@@ -344,15 +344,7 @@ div[data-name="pages"] div[data-name="page-intro"] {
   overflow: hidden; }
   @media (max-width: 40em) {
     div[data-name="pages"] div[data-name="page-intro"] {
-      background-image: url(/static/assets/videos/background-video.gif); }
-    div[data-name="pages"] div[data-name="page-intro"].alt-2 {
-      background-image: url(/static/assets/videos/background-video-2.gif); }
-    div[data-name="pages"] div[data-name="page-intro"].alt-3 {
-      background-image: url(/static/assets/videos/background-video-3.gif); }
-    div[data-name="pages"] div[data-name="page-intro"].alt-4 {
-      background-image: url(/static/assets/videos/background-video-4.gif); }
-    div[data-name="pages"] div[data-name="page-intro"].alt-5 {
-      background-image: url(/static/assets/videos/background-video-5.gif); } }
+      background-image: url(/static/assets/videos/background-video.gif); } }
   div[data-name="pages"] div[data-name="page-intro"] div[data-name="box"] {
     width: 90%;
     max-width: 30rem;
