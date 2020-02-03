@@ -1,0 +1,290 @@
+<ng-include src="'/static/views/includes/header.html'"></ng-include>
+
+<main ng-controller="LandingController">
+    <div data-name="pages">
+        <div data-name="page-intro" class="alt-2">
+            <div data-name="box">
+                <h1>Be Your Own <strong>Bank</strong>.</h1>
+                <a href="/contactus" target="_blank">Contact Us!</a>
+            </div>
+            <div data-name="video">
+                <div data-name="video-overlay"></div>
+                <video playsinline autoplay muted loop>
+                    <source src="/static/assets/videos/background-video-3.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div data-name="page-independence">
+            <h2><strong>Independence</strong> through <strong>Crypto.</strong></h2>
+            <div data-name="map"></div>
+            <div data-name="text">
+                <p>The significance of cryptocurrencies in a wavering global economy is no longer debatable. Decentralized finance (DeFi) by way of blockchain technology will transform the way individuals and businesses operate around the world. <strong>We at DeFi Global are here to assist and guide you on your journey from the traditional system to self-sovereignty.</strong></p>
+                <div data-name="underline"></div>
+            </div>
+        </div>
+        <div data-name="page-whoweare" id="whoweare">
+            <h3>Who We Are</h3>
+            <div data-name="point-left">
+                <div data-name="text">
+                    <h4>Our Mission</h4>
+                    <p>The complexities and scarce education around cryptocurrencies and blockchain prevent many from taking the leap into the emerging digital world.</p>
+                    <p>Our mission at DeFi Global is to provide our clients with a comfortable understanding of the new <strong>decentralized financial system</strong>, to provide clarity and in-depth analysis of all <strong>benefits and risks</strong>, and to ensure <strong>security and privacy</strong> while investing in the asset class of tomorrow.</p>
+                    <a href="/ourmission" target="_blank">Learn More</a>
+                    <div data-name="number">1.</div>
+                </div>
+                <div data-name="image"></div>
+            </div>
+            <div data-name="point-right">
+                <div data-name="image"></div>
+                <div data-name="text">
+                    <h4>Our People</h4>
+                    <p>DeFi Global has a team of dedicated professionals with years of experience in the industry and specialties in <strong>finance, tech, and cryptoeconomics</strong>. Our established projects and accomplishments include: advising various high-net-worth clients with digital asset portfolios, developing two Ethereum-based platforms, a Bitcoin-based coin, and a hardware device for running Bitcoin/Ethereum nodes connected through a mobile app.</p>
+                    <div data-name="number">2.</div>
+                </div>
+            </div>
+        </div>
+        <div data-name="page-whatwedo" id="whatwedo">
+            <h3>What We Do</h3>
+            <div data-name="options">
+                <div data-name="option" ng-click="whatwedo.setSection(1)" ng-class="{selected: whatwedo.section === 1}">Advisory <div></div></div>
+                <div data-name="option" ng-click="whatwedo.setSection(2)" ng-class="{selected: whatwedo.section === 2}">Wealth Management <div></div></div>
+                <div data-name="option" ng-click="whatwedo.setSection(3)" ng-class="{selected: whatwedo.section === 3}">Investments <div></div></div>
+            </div>
+            <div data-name="options-content">
+                <div data-name="option-content" ng-show="whatwedo.section === 1">
+                    <div data-name="banner" style='background-image: url(/static/assets/images/advisory-banner.png)'>
+                        <div data-name="title">Advisory</div>
+                    </div>
+                    <div data-name="suboptions-content">
+                        <div data-name="suboption-content" ng-show="whatwedo.subsection === 1">
+                            <div data-name="image" style='background-image: url(/static/assets/images/advisory-image-1.png)'>
+                                <div data-name="box">
+                                    <strong>1.</strong>
+                                    <strong>Planning</strong>
+                                </div>
+                            </div>
+                            <div data-name="arrows">
+                                <div data-name="left" class="disabled"></div>
+                                <div data-name="right" ng-click="whatwedo.nextSubsection()"></div>
+                            </div>
+                            <div data-name="text">
+                                <p>The first step DeFi Global takes is getting to know you. We feel it is of utmost importance to build a strong relationship with you and earn your trust. In doing so, we develop a clear understanding of your <strong>goals, priorities, and vision</strong> for the future, all the while educating you on different aspects of <strong>decentralized finance and digital currencies</strong>. We then determine the appropriate course of action to help you achieve what is important to you.</p>
+                            </div>
+                        </div>
+                        <div data-name="suboption-content" ng-show="whatwedo.subsection === 2">
+                            <div data-name="image" style='background-image: url(/static/assets/images/advisory-image-2.png)'>
+                                <div data-name="box">
+                                    <strong>2.</strong>
+                                    <strong>Digital Asset Onboarding</strong>
+                                </div>
+                            </div>
+                            <div data-name="arrows">
+                                <div data-name="left" ng-click="whatwedo.previousSubsection()"></div>
+                                <div data-name="right" class="disabled"></div>
+                            </div>
+                            <div data-name="text">
+                                <p>Obtaining your first digital asset is your entrypoint to DeFi, providing you access to a financial system that is <strong>tamperproof and trustless</strong>, requiring <strong>no third parties</strong>. Your funds are kept <strong>secure and private</strong>. We will navigate you through aspects such as exchange markets, setting up wallets, how to send and receive assets, and much more. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-name="option-content" ng-show="whatwedo.section === 2">
+                    <div data-name="banner" style='background-image: url(/static/assets/images/wealthmanagement-banner.png)'>
+                        <div data-name="title">Wealth Management</div>
+                    </div>
+                    <div data-name="suboptions-content">
+                        <div data-name="suboption-content" ng-show="whatwedo.subsection === 1">
+                            <div data-name="image" style='background-image: url(/static/assets/images/wealthmanagement-image-1.png)'>
+                                <div data-name="box">
+                                    <strong>1.</strong>
+                                    <strong>Preservation and Growth</strong>
+                                </div>
+                            </div>
+                            <div data-name="arrows">
+                                <div data-name="left" class="disabled"></div>
+                                <div data-name="right" ng-click="whatwedo.nextSubsection()"></div>
+                            </div>
+                            <div data-name="text">
+                                <p>You have worked hard to accumulate your wealth. It is DeFi Global’s privilege to provide our expertise to help you achieve your goal of <strong>wealth preservation and protection</strong>. After understanding your needs and risk appetite, we develop a multi-pronged approach to ensure appropriate measures are taken to <strong>preserve and grow</strong> your wealth. Plans can be designed for the most risk averse to the least risk averse- DeFi Global has you covered.</p>
+                            </div>
+                        </div>
+                        <div data-name="suboption-content" ng-show="whatwedo.subsection === 2">
+                            <div data-name="image" style='background-image: url(/static/assets/images/wealthmanagement-image-2.png)'>
+                                <div data-name="box">
+                                    <strong>2.</strong>
+                                    <strong>Storage and Security</strong>
+                                </div>
+                            </div>
+                            <div data-name="arrows">
+                                <div data-name="left" ng-click="whatwedo.previousSubsection()"></div>
+                                <div data-name="right" class="disabled"></div>
+                            </div>
+                            <div data-name="text">
+                                <p>In order to prevent hacks, stolen funds, and lost private keys, we work together with you to form the best solution for keeping your digital assets <strong>safe, secure, and private</strong>. Whether utilizing cold storage, hardware wallets, multi-signature wallets, or a combination approach, we will establish <strong>best practices</strong> for you to <strong>safeguard your funds</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-name="option-content" ng-show="whatwedo.section === 3">
+                    <div data-name="banner" style='background-image: url(/static/assets/images/investments-banner.png)'>
+                        <div data-name="title">Investments</div>
+                    </div>
+                    <div data-name="suboptions-content">
+                        <div data-name="suboption-content" ng-show="whatwedo.subsection === 1">
+                            <div data-name="image"style='background-image: url(/static/assets/images/investments-image-1.png)'>
+                                <div data-name="box">
+                                    <strong>1.</strong>
+                                    <strong>Portfolio Management</strong>
+                                </div>
+                            </div>
+                            <div data-name="text">
+                                <p>As with any traditional investment strategy, <strong>diversification is key</strong>; this remains true for digital assets. Beyond Bitcoin and Ethereum, other innovative projects with different applications are always entering the fray. We are constantly researching and applying our understanding of blockchains and cryptoeconomics to evaluate new protocols. With our acumen for digital asset markets, we will work with you to build a <strong>diversification strategy</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-name="page-defi" id="defi">
+            <h3>DeFi</h3>
+            <div data-name="image">
+                <p>Decentralized finance, or <strong>DeFi</strong>, is traditional finance combined with the decentralized nature of <strong>blockchain technology</strong>. Why is decentralization important? The answer; <strong>sovereignty</strong>, <strong>security, and privacy</strong>. With DeFi, there are no intermediaries or institutions involved- meaning when you own a digital asset, you have <strong>100% control</strong>.</p>
+                <div data-name="text">
+                    <a href="/info/defi" target="_blank">Learn More</a>
+                </div>
+                <img data-name="text-background" src="/static/assets/images/defi-section-bottom.png" />
+            </div>
+        </div>
+        <div data-name="page-team">
+            <h3>Our Team</h3>
+            <div data-name="team">
+                <div data-name="member" ng-click="teamShow = 'sachit'">
+                    <div data-name="image" style="background-image: url('/static/assets/images/team/team_sachit.jpg')"></div>
+                    <strong>Sachit Singh</strong>
+                    <span>Co-Founder, Partner</span>
+                </div>
+                <div data-name="member" ng-click="teamShow = 'scott'">
+                    <div data-name="image" style="background-image: url('/static/assets/images/team/team_scott.jpg')"></div>
+                    <strong>Scott Wade</strong>
+                    <span>Co-Founder, Partner</span>
+                </div>
+                <div data-name="member" ng-click="teamShow = 'samit'">
+                    <div data-name="image" style="background-image: url('/static/assets/images/team/team_samit.png')"></div>
+                    <strong>Samit Singh</strong>
+                    <span>Co-Founder, Partner</span>
+                </div>
+                <div data-name="member" ng-click="teamShow = 'dondrey'">
+                    <div data-name="image" style="background-image: url('/static/assets/images/team/team_dondrey.jpg')"></div>
+                    <strong>Dondrey Taylor</strong>
+                    <span>Co-Founder, Partner</span>
+                </div>
+            </div>
+        </div>
+        <div data-name="page-contact">
+            <h3>Contact Us</h3>
+            <div data-name="image">
+                <div data-name="box">
+                    <p>Our aim is to break down the complexities of digital currencies into their simplest form. DeFi Global is here to fully understand your financial needs, and deliver services and solutions that help <strong>build, preserve, and manage your wealth through means of decentralized finance.</strong></p>
+                    <a href="/contactus" target="_blank">Get to know us!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-name="disclaimer-overlay" ng-show="disclaimer.isVisible">
+        <div data-name="logo"></div>
+        <div data-name="content">
+            <p>Disclaimer: Aside from our existing offerings at DeFi Global, we do not provide any legal or accounting advice. For such services, please contact a law firm or a certified accountant. In addition, our wealth management services are non-custodial, meaning that we do not ever hold funds or cryptographic private keys on behalf of our clients. For any purchases of cryptocurrency, we direct all of our clients to licensed third parties, including but not limited to platforms, such as Coinbase and Gemini.</p>
+            <a href="javascript:void(0);" class="button" ng-click="disclaimer.accept()">Continue</a>
+        </div>
+    </div>
+
+    <div data-name="team-overlay" ng-show="teamShow === 'sachit'">
+        <div data-name="background" ng-click="teamShow = ''"></div>
+        <div data-name="content">
+            <a href="javascript:void(0);" data-name="close" ng-click="teamShow = ''">
+                <i class="fas fa-times"></i>
+            </a>
+            <div data-name="details">
+                <div data-name="image" style="background-image: url('/static/assets/images/team/team_sachit.jpg')"></div>
+                <div data-name="bio">
+                    <strong>Sachit Singh</strong>
+                    <span>Co-Founder, Partner</span>
+                    <p>Sachit is a 2016 Finance graduate from Pennsylvania State University. He is highly-skilled professional in the digital asset/blockchain space, with vast experience via several start-ups. Sachit has been involved in the cryptocurrency space full-time now for over 3 years with previous experience as a Financial Analyst. His passion for blockchains and decentralized networks began through a background of mining and handling a large-scale mining operation. In October of 2017, he attended DevCon3 in Cancun, Mexico, and began to truly believe in the future of Ethereum. Sachit is currently the Operations Lead of Bithereum, a fork of BTC, as well as a core team member and Operations Lead at nimbleNODE.io. His goal is to further the advancement of crypto and abstract it in any way possible to deliver easy-to-use solutions for the everyday consumer.</p>
+                    <p>This has led him down the path of decentralized finance in Ethereum, and ultimately DeFi Global- where his deep knowledge and passion of both blockchain and finance could be leveraged to empower others and walk them through the slippery-slope of dealing with digital assets. Sachit has assisted in the management of several high net-worth portfolios till date, and always extends a hand to anyone looking for further insight and assistance in the space.</p>
+                    <a href="https://www.linkedin.com/in/sachit-singh-b2a873ab" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-name="team-overlay" ng-show="teamShow === 'scott'">
+        <div data-name="background" ng-click="teamShow = ''"></div>
+        <div data-name="content">
+            <a href="javascript:void(0);" data-name="close" ng-click="teamShow = ''">
+                <i class="fas fa-times"></i>
+            </a>
+            <div data-name="details">
+                <div data-name="image" style="background-image: url('/static/assets/images/team/team_scott.jpg')"></div>
+                <div data-name="bio">
+                    <strong>Scott Wade</strong>
+                    <span>Co-Founder, Partner</span>
+                    <p>Scott blends his experience in blockchain technology and economics to approach DeFi and digital assets from a unique angle. Prior to DeFi Global, Scott had worked as a strategist for three projects including an Ethereum dApp, Bitcoin fork, and a consumer hardware device, which bolstered his knowledge of this emerging technology. With his economic background along with his analytical mindset, he has also provided immense value to multiple clients in regards to portfolio management strategies of digital assets.</p>
+                    <p>Having obtained an Economics degree from The Pennsylvania State University in 2016, where he was involved with the Investment Association, Asset Management Club, and Bitcoin Club, Scott has developed a deep understanding of digital assets at both the micro and macro levels. He has attended various meet-ups and conferences throughout the world in North and South America, Europe, and Asia. As a result, he has seen the benefits of decentralized finance for all economic conditions first-hand.</p>
+                    <p>Scott believes that trust and communication are paramount for business relationships and will work with you to ensure you are comfortable with digital assets, before tailoring a personalized strategy to maximize your wants and needs.</p>
+                    <a href="https://www.linkedin.com/in/scott-wade-401b20105/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-name="team-overlay" ng-show="teamShow === 'samit'">
+        <div data-name="background" ng-click="teamShow = ''"></div>
+        <div data-name="content">
+            <a href="javascript:void(0);" data-name="close" ng-click="teamShow = ''">
+                <i class="fas fa-times"></i>
+            </a>
+            <div data-name="details">
+                <div data-name="image" style="background-image: url('/static/assets/images/team/team_samit.png')"></div>
+                <div data-name="bio">
+                    <strong>Samit Singh</strong>
+                    <span>Co-Founder, Partner</span>
+                    <p>Samit is an experienced business strategist and product developer who co-founded a messaging app startup called MiniChat, Inc., along with one of his current partners. Together, they also created a video and photo app called Tack Video. He has 8+ years of startup experience, having worked at other internet startups before this. He closely follows patterns in UI/UX design, mobile technology, and emerging technology- especially all the unique ways in which we can explore social interaction and incentivized networks. This is what eventually led to his love of blockchain technology, cryptocurrencies, and consensus design. Overall, his well-rounded experience spans everything from web and mobile design to building business that serve users at scale.</p>
+                    <p>As of now, he designs DNN’s interface and helps define its overall vision. In addition, he also handles product and design for nimbleNODE, as well as working with the same team to bring DeFi awareness to the world with DeFi Global. He has spoken at large-scale blockchain conferences, such as the World Blockchain Forum, to help spread further awareness of blockchains and their use cases. Currently, his primary focus is on all things blockchain and Ethereum, as well as how this incredible technology can impact society as a whole. Samit places exceptional importance on simple products that can be used by any consumer.</p>
+                    <a href="https://www.linkedin.com/in/singhsamit" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-name="team-overlay" ng-show="teamShow === 'dondrey'">
+        <div data-name="background" ng-click="teamShow = ''"></div>
+        <div data-name="content">
+            <a href="javascript:void(0);" data-name="close" ng-click="teamShow = ''">
+                <i class="fas fa-times"></i>
+            </a>
+            <div data-name="details">
+                <div data-name="image" style="background-image: url('/static/assets/images/team/team_dondrey.jpg')"></div>
+                <div data-name="bio">
+                    <strong>Dondrey Taylor</strong>
+                    <span>Co-Founder, Partner</span>
+                    <p>Throughout the years, Dondrey has worked as a seasoned web and mobile full stack developer and consultant for various tech startups on the east coast of the US. He is currently the CTO of CapWay- a mobile focused bank that provides financial opportunities for those that are unbanked or underbanked in the United States.</p>
+                    <p>He has been involved with blockchains and cryptocurrencies for the past 4 years. Together with his business partner, he started a company called Decentralized News Network- a collaborative news platform that addresses systemic issues in media.</p>
+                    <p>Dondrey has worked on a number of large scale financial applications involving cryptocurrency and brings with him an area of expertise that is helpful for maneuvering through the emerging world of Decentralized Finance. He holds a Bachelor of Science in Information Technology with a specialization in systems architecture from New Jersey Institute of Technology.</p>
+                    <a href="https://www.linkedin.com/in/dondreytaylor" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<ng-include src="'/static/views/includes/footer.html'"></ng-include>

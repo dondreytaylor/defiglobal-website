@@ -18,6 +18,15 @@ config(['$locationProvider', '$interpolateProvider', '$routeProvider', function(
       .when("/landing2", {
           templateUrl : "/static/views/pages/landing-2.html"
       })
+      .when("/landing3", {
+          templateUrl : "/static/views/pages/landing-3.html"
+      })
+      .when("/landing4", {
+          templateUrl : "/static/views/pages/landing-4.html"
+      })
+      .when("/landing5", {
+          templateUrl : "/static/views/pages/landing-5.html"
+      })
       .when("/ourmission", {
           templateUrl : "/static/views/pages/ourmission.html"
       })
