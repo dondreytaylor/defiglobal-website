@@ -123,7 +123,7 @@ header {
 
 footer {
   width: 100%;
-  padding: 4rem 2rem 5rem 2rem;
+  padding: 4rem 0.5rem 5rem 0.5rem;
   background-color: #F9FAFB;
   text-align: center; }
   footer div[data-name="logo"] {
@@ -143,12 +143,15 @@ footer {
     margin: 0 auto 2rem auto;
     font-size: 0.9rem;
     line-height: 1.8;
-    width: 95%;
+    width: 90%;
     color: #666666;
     text-align: center; }
     footer div[data-name="disclaimer"] a {
       color: #6500FF;
       text-decoration: none; }
+    @media (max-width: 40em) {
+      footer div[data-name="disclaimer"] span {
+        display: block; } }
   footer div[data-name="copyright"] {
     font-size: 0.9rem; }
 
