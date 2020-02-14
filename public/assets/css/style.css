@@ -315,7 +315,7 @@ div[data-name="disclaimer-overlay"] {
     background-image: url("/static/assets/images/defiglobal-logo-alt.png");
     margin: 2rem; }
   div[data-name="disclaimer-overlay"] div[data-name="content"] {
-    max-width: 32rem;
+    max-width: 40rem;
     width: 85%;
     font-size: 0.9rem;
     line-height: 2;
