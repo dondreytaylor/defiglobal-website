@@ -416,6 +416,7 @@ div[data-name="disclaimer-overlay"] {
     height: 100vh;
     background-color: rgba(255,255,255,0.98);
     z-index: 100;
+    overflow-y: auto;
 
     div[data-name="logo"] {
         width: 10rem;

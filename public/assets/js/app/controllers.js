@@ -64,7 +64,7 @@ angular.module('Application.controllers', [])
       };
 
       $scope.disclaimer = {
-          isVisible:true, // !localStorage.getItem("disclaimer-accept"),
+          isVisible: !localStorage.getItem("disclaimer-accept"),
           accept: function() {
               this.isVisible = false;
               localStorage.setItem("disclaimer-accept", true);
