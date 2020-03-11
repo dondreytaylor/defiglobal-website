@@ -367,7 +367,7 @@ div[data-name="pages"] div[data-name="page-intro"] {
         margin-left: -45%;
         max-width: 90%; } }
     div[data-name="pages"] div[data-name="page-intro"] div[data-name="box"] h1 {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       color: #6500FF;
       margin: 0 0 2rem 0; }
       @media (max-width: 64em) {
